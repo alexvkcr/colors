@@ -6,10 +6,7 @@
 
 <script>
 export default {
-  name: 'Presentation',
-  props: {
-    msg: String
-  }
+  name: 'Presentation'
 }
 </script>
 
