@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <app-header class="header"></app-header>
+    <side-bar class="side-bar"></side-bar>
+    <div class="main"><router-view></router-view></div>
+    <app-footer class="footer"></app-footer>
   </div>
 </template>
-
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
