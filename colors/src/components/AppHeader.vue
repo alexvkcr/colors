@@ -1,28 +1,38 @@
 <template>
   <div id="AppHeader">
-    <h1>Learn all the colors!</h1>
+    <h1>{{ $t('learnColors') }}</h1>
     <v-tabs
-      fixed-tabs
       color="#2E6C61"
     >
       <v-tab>
-        Presentación
+        {{ $t('presentation') }}
       </v-tab>
-      <v-tab>
-      Option
+    <v-tab>
+        {{ $t('play') }}
     </v-tab>
     <v-tab>
-      Another Selection
-    </v-tab>
-    <v-tab>
-      Items
-    </v-tab>
-    <v-tab>
-      Another Screen
+        {{ $t('about') }}
     </v-tab>
     </v-tabs>
   </div>
 </template>
+
+<i18n>
+{
+  "es": {
+    "learnColors": "¡Aprende todos los colores!",
+    "presentation": "presentación",
+    "play" : "Juega",
+    "about" : "Sobre mí"
+  },
+  "en": {
+    "learnColors": "Learn all the colors!",
+    "presentation": "presentation",
+    "play": "play",
+    "about" : "About me"
+  }
+}
+</i18n>
 
 <script>
 export default {

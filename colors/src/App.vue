@@ -17,3 +17,17 @@ export default {
   }),
 };
 </script>
+
+
+<i18n>
+{
+  "es": {
+    "presentation": "presentación",
+    "learnColors": "¡Aprende todos los colores!"
+  },
+  "en": {
+    "presentation": "presentation",
+    "learnColors": "Learn all the colors!"
+  }
+}
+</i18n>
