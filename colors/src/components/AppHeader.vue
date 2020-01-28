@@ -40,9 +40,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 h1{
+    margin: 30px 0;
     color: #2E6C61;
     text-align: center;
+}
+.v-slide-group__prev:not(.a):not(.a):not(.a):not(.a):not(.a):not(.a){
+  display:none;
 }
 </style>
