@@ -4,6 +4,7 @@ import App from './App.vue'
 
 
 import Presentation from './components/Presentation.vue'
+import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -23,5 +24,6 @@ const router = new VueRouter({
 
 new Vue({
     router,
-    render: h => h(App),
+    vuetify,
+    render: h => h(App)
 }).$mount('#app')
