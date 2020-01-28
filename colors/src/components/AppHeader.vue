@@ -10,8 +10,8 @@
     <v-tab to="/play">
         {{ $t('play') }}
     </v-tab>
-    <v-tab>
-        {{ $t('about') }}
+    <v-tab to="/howto">
+        {{ $t('howto') }}
     </v-tab>
     </v-tabs>
     <router-view></router-view>
@@ -24,13 +24,13 @@
     "learnColors": "¡Aprende todos los colores!",
     "presentation": "presentación",
     "play" : "Juega",
-    "about" : "Sobre mí"
+    "howto" : "Cómo jugar"
   },
   "en": {
     "learnColors": "Learn all the colors!",
     "presentation": "presentation",
     "play": "play",
-    "about" : "About me"
+    "howto" : "How to"
   }
 }
 </i18n>

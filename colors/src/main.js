@@ -7,6 +7,7 @@ import App from './App.vue'
 
 import Presentation from './components/Presentation.vue'
 import Play from './components/Play.vue'
+import HowTo from './components/HowTo.vue'
 
 Vue.config.productionTip = false
 Vue.use(VueI18n)
@@ -19,7 +20,7 @@ const i18n = new VueI18n({
 const routes = [
     { name: 'Index', path: '/', component: Presentation },
     { name: 'Play', path: '/play', component: Play },
-    //{ name: 'HowTo', path: '/headquarters', component: HowTo }
+    { name: 'HowTo', path: '/howto', component: HowTo }
 ]
 
 
