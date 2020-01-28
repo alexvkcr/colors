@@ -4,16 +4,17 @@
     <v-tabs
       color="#2E6C61"
     >
-      <v-tab>
+      <v-tab to="/">
         {{ $t('presentation') }}
       </v-tab>
-    <v-tab>
+    <v-tab to="/play">
         {{ $t('play') }}
     </v-tab>
     <v-tab>
         {{ $t('about') }}
     </v-tab>
     </v-tabs>
+    <router-view></router-view>
   </div>
 </template>
 

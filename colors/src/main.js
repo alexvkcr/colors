@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
+import vuetify from './plugins/vuetify';
 import App from './App.vue'
 
 
 import Presentation from './components/Presentation.vue'
-import vuetify from './plugins/vuetify';
+import Play from './components/Play.vue'
 
 Vue.config.productionTip = false
 Vue.use(VueI18n)
@@ -17,7 +18,7 @@ const i18n = new VueI18n({
 
 const routes = [
     { name: 'Index', path: '/', component: Presentation },
-    //{ name: 'Play', path: '/items', component: Play },
+    { name: 'Play', path: '/play', component: Play },
     //{ name: 'HowTo', path: '/headquarters', component: HowTo }
 ]
 
