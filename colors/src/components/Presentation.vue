@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'Presentation'
+  name: 'Presentation',
 }
 </script>
 
@@ -41,6 +41,11 @@ export default {
 *{
     color: #2e586c;
 }
+.Presentation{
+    margin: 0 10%;
+    min-width: 250px;
+    background-color: #b8e0dc;
+  }
 h2,h3{
     margin: 30px 0;
     text-align: center;
@@ -48,6 +53,12 @@ h2,h3{
 .select{
   position: relative;
   bottom: 30px;
-  left: 90%;
+  left: 50%;
 }
+@media screen and (min-width: 600px) {
+  .select{
+    left: 90%;
+  }
+}
+
 </style>
