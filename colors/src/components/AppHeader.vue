@@ -3,6 +3,7 @@
     <h1>{{ $t('learnColors') }}</h1>
     <v-tabs
       color="#2E6C61"
+      background-color="#aae0bc"
     >
       <v-tab to="/">
         {{ $t('presentation') }}
