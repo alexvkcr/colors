@@ -1,6 +1,7 @@
 <template>
   <div class="HowTo">
     HowTo!
+    Lista de colores
   </div>
 </template>
 

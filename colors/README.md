@@ -1,6 +1,6 @@
 # colors
 #TO-DO
-Add a tab group that indicates what comp is being shown and easy to navigate the Website
+Add a list of colors in HowTo and explanation of the 2 games, name the color, go over the color
 ## Project setup
 ```
 npm install
