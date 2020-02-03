@@ -3,7 +3,7 @@
     <h2>{{ $t('welcome') }}</h2>
     <div class="select">
       <p>{{$t('change')}}</p>
-      <select>
+      <select v-model="$root.$i18n.locale">
         <option value="en">{{$t('en')}}</option>
         <option value="es">{{$t('es')}}</option>
       </select>
@@ -15,6 +15,11 @@
 <script>
 export default {
   name: 'Presentation',
+  methods: {
+    onChange(event) {
+        console.log(event.target.value)
+    }
+  }
 }
 </script>
 
