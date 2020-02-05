@@ -1,4 +1,6 @@
 module.exports = {
+    publicPath: process.env.NODE_ENV === 'production' ?
+        '/colors/' : '/',
     pluginOptions: {
         i18n: {
             locale: 'en',
