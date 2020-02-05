@@ -1,6 +1,10 @@
 # colors
 #TO-DO
 Add a list of colors in HowTo and explanation of the 2 games, name the color, go over the color
+
+## Web Available at 
+https://alexvkcr.github.io/colors
+
 ## Project setup
 ```
 npm install
@@ -25,5 +29,18 @@ npm run build
 npm run lint
 ```
 
+### Deploy at Github
+1 change branch to 'gh-pages'
+
+2 Comment 'dist' at .gitignore
+
+3 npm run build
+
+4 git add dist && git commit -m "Initial dist subtree commit"
+
+5 git subtree push --prefix dist origin gh-pages
+
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
