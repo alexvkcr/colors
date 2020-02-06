@@ -10,11 +10,7 @@ export default {
 
   components: {
     AppHeader,
-  },
-
-  data: () => ({
-    //
-  }),
+  }
 };
 </script>
 
