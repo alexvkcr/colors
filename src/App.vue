@@ -1,19 +1,9 @@
 <template>
-  <app-header></app-header>
+  <div id="App">
+    <app-header></app-header>
+    <tabs></tabs>
+  </div>
 </template>
-
-<script>
-import AppHeader from './components/AppHeader.vue';
-
-export default {
-  name: 'App',
-
-  components: {
-    AppHeader,
-  }
-};
-</script>
-
 
 <i18n>
 {
@@ -27,3 +17,21 @@ export default {
   }
 }
 </i18n>
+
+
+<script>
+import AppHeader from './components/AppHeader.vue';
+import Tabs from './components/Tabs.vue';
+
+export default {
+  name: 'App',
+  components: {
+    AppHeader, Tabs
+  }
+};
+</script>
+
+<style>
+</style>
+
+
