@@ -17,10 +17,19 @@ const i18n = new VueI18n({
     locale: 'en',
 })
 
+const colorsList = {
+    verdeMalaquito: {
+        codes: ['1f533f', '12774f'],
+        es: 'Verde Malaquito',
+        en: 'Green Malachite'
+    }
+}
+
+
 const routes = [
     { name: 'Index', path: '/', component: Presentation },
     { name: 'Play', path: '/play', component: Play },
-    { name: 'HowTo', path: '/howto', component: HowTo }
+    { name: 'HowTo', path: '/howto', component: HowTo, props: { propColorList: colorsList } }
 ]
 
 
