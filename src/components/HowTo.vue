@@ -12,7 +12,7 @@ import ColorList from './ColorList.vue';
 export default {
   name: 'HowTo',
   props: {
-    'propColorList': Array
+    'propColorList': Object
   },
   components: {
     ColorList
