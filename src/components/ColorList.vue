@@ -1,6 +1,7 @@
 <template>
   <div id="ColorList">
-      {{ propColorList }}
+      <p v-for="color in propColorList" :key="color.codes" >{{color[$i18n.locale]}}</p>
+      {{this.$i18n.locale}}
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 export default {
   name: 'ColorList',
   props: {
-      'propColorList': Array
+      'propColorList': Object
   }
 }
 </script>
