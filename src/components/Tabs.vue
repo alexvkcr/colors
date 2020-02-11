@@ -35,8 +35,7 @@
 
 <script>
 export default {
-  name: 'Tabs',
-  props: [ 'propColorList' ]
+  name: 'Tabs'
 }
 </script>
 
