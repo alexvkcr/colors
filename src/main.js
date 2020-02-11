@@ -22,6 +22,11 @@ const colorsList = {
         codes: ['1f533f', '12774f'],
         es: 'Verde Malaquito',
         en: 'Green Malachite'
+    },
+    borgoña: {
+        codes: ['673147'],
+        es: 'Borgoña',
+        en: 'Burgundy'
     }
 }
 
