@@ -1,9 +1,21 @@
 <template>
   <div class="HowTo">
-    HowTo!
+    <p>{{ $t('hereYouHave') }}</p>
     <color-list :prop-color-list="propColorList"></color-list>
   </div>
 </template>
+
+
+<i18n>
+{
+  "es": {
+    "hereYouHave": "Aquí tienes todos los colores disponibles"
+  },
+  "en": {
+    "hereYouHave": "Here you have all the colors available"
+  }
+}
+</i18n>
 
 <script>
 
