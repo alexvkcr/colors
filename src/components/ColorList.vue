@@ -25,24 +25,19 @@ export default {
 #ColorList{
     width: 80%;
     margin-top: 10px;
+    padding-left: 20px;
     display: grid;
-    grid-template-areas:   
-        "header header header"
-        "row row row";
     grid-template-columns: 1fr 4fr 8fr;
-    grid-template-rows:    40px repeat(auto-fill, 40px);
-}
-.header{
-    grid-area: "header";
+    grid-auto-rows: 40px;
+    grid-gap: 10px;
 }
 .colorBox{
     display: flex;
-    grid-area: "row";
 }
 .colorDisplay{
-    height: 15px;
+    height: 25px;
     width: 100%;
-    background-color: black;
+    border: 2px solid white;
 }
   @media screen and (min-width: 600px) {
     #ColorList{
