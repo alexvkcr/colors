@@ -26,9 +26,6 @@ export default {
     width: 80%;
     margin-top: 10px;
     display: grid;
-    grid-template-areas:   
-        "header header header"
-        "row row row";
     grid-template-columns: 1fr 4fr 8fr;
     grid-template-rows:    40px repeat(auto-fill, 40px);
 }
