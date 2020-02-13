@@ -27,7 +27,8 @@ export default {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 4fr 8fr;
-    grid-template-rows:    40px repeat(auto-fill, 40px);
+    grid-auto-rows: 40px;
+    grid-gap: 10px;
 }
 .header{
     grid-area: "header";

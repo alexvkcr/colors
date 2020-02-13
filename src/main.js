@@ -18,20 +18,6 @@ const i18n = new VueI18n({
 })
 
 const colorsList = {
-    verdeMalaquito: {
-        codes: ['1f533f', '12774f'],
-        es: 'Malaquito',
-        en: 'Malachite',
-        es_tip: 'Verde',
-        en_tip: 'Green',
-    },
-    borgoña: {
-        codes: ['673147'],
-        es: 'Borgoña',
-        en: 'Burgundy',
-        es_tip: '',
-        en_tip: ''
-    },
     sable: {
         codes: ['000000'],
         es: 'Sable',
@@ -45,13 +31,6 @@ const colorsList = {
         en: 'Cordovan',
         es_tip: 'Negro pardo cuero',
         en_tip: 'Leather dark brown'
-    },
-    bistre: {
-        codes: ['967117'],
-        es: 'Bistre',
-        en: 'Bistre',
-        es_tip: 'Marrón amarillento',
-        en_tip: 'Yellowish brown'
     },
     grisPayne: {
         codes: ['536878'],
@@ -80,6 +59,27 @@ const colorsList = {
         en: 'Umber',
         es_tip: 'Marrón rojizo',
         en_tip: 'Reddish-brown '
+    },
+    bistre: {
+        codes: ['967117'],
+        es: 'Bistre',
+        en: 'Bistre',
+        es_tip: 'Marrón amarillento',
+        en_tip: 'Yellowish brown'
+    },
+    borgoña: {
+        codes: ['673147'],
+        es: 'Borgoña',
+        en: 'Burgundy',
+        es_tip: '',
+        en_tip: ''
+    },
+    verdeMalaquito: {
+        codes: ['1f533f', '12774f'],
+        es: 'Malaquito',
+        en: 'Malachite',
+        es_tip: 'Verde',
+        en_tip: 'Green',
     },
 }
 
