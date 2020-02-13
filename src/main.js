@@ -23,7 +23,7 @@ const colorsList = {
         es: 'Sable',
         en: 'Sable',
         es_tip: 'Negro heráldico',
-        en_tip: 'Heraldic black '
+        en_tip: 'Heraldic black'
     },
     cordoban: {
         codes: ['42352d'],
@@ -74,12 +74,40 @@ const colorsList = {
         es_tip: '',
         en_tip: ''
     },
+    sinople: {
+        codes: ['008f4c'],
+        es: 'Sinople',
+        en: 'Sinople',
+        es_tip: 'Verde heráldico',
+        en_tip: 'Heraldic green'
+    },
     verdeMalaquito: {
         codes: ['1f533f', '12774f'],
         es: 'Malaquito',
         en: 'Malachite',
         es_tip: 'Verde',
         en_tip: 'Green',
+    },
+    jade: {
+        codes: ['08a86b'],
+        es: 'Jade',
+        en: 'Jade',
+        es_tip: 'Verde jade',
+        en_tip: 'Jade green'
+    },
+    esmeralda: {
+        codes: ['009975'],
+        es: 'Esmeralda',
+        en: 'Emerald',
+        es_tip: 'Verde esmeralda',
+        en_tip: 'Emerald green'
+    },
+    viridian: {
+        codes: ['007F66'],
+        es: 'Viridián',
+        en: 'Viridian',
+        es_tip: 'Verde viridián',
+        en_tip: 'Viridián green'
     },
 }
 
