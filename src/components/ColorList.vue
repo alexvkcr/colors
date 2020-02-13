@@ -31,12 +31,8 @@ export default {
     grid-auto-rows: 40px;
     grid-gap: 10px;
 }
-.header{
-    grid-area: "header";
-}
 .colorBox{
     display: flex;
-    grid-area: "row";
 }
 .colorDisplay{
     height: 25px;
