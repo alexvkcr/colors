@@ -110,6 +110,69 @@ const colorsList = {
         es_tip: 'Verde viridián',
         en_tip: 'Viridián green'
     },
+    veronese: {
+        codes: ['009D7A'],
+        es: 'Veronés',
+        en: 'Paolo Veronese',
+        es_tip: 'Verde Paolo Veronese',
+        en_tip: 'Paolo Veronese green'
+    },
+    cartujo: {
+        codes: ['BEB72D'],
+        es: 'Cartujo',
+        en: 'Chartreuse ',
+        es_tip: 'Verde cartujo',
+        en_tip: 'Chartreuse green'
+    },
+    hansa: {
+        codes: ['FFDD00'],
+        es: 'Hansa',
+        en: 'Arylide',
+        es_tip: 'Amarillo Hansa o monoazo',
+        en_tip: 'Arylide or Hansa yellow'
+    },
+    hansaMedio: {
+        codes: ['FFCD00'],
+        es: 'Hansa medio',
+        en: 'Medium arylide',
+        es_tip: 'Amarillo Hansa',
+        en_tip: 'Medium hansa yellow'
+    },
+    hansaOscuro: {
+        codes: ['FFB000'],
+        es: 'Hansa oscuro',
+        en: 'Dark arylide',
+        es_tip: 'Amarillo Hansa oscuro',
+        en_tip: 'Dark hansa yellow'
+    },
+    ambar: {
+        codes: ['E49E43'],
+        es: 'Ámbar',
+        en: 'Amber',
+        es_tip: 'Amarillo ámbar',
+        en_tip: 'Amber yellow'
+    },
+    terracota: {
+        codes: ['C89C7D'],
+        es: 'Terracota',
+        en: 'Terra cotta',
+        es_tip: 'Naranja rojizo',
+        en_tip: 'Reddish orange'
+    },
+    cobrizo: {
+        codes: ['CB6D51'],
+        es: 'Cobrizo',
+        en: 'Copper',
+        es_tip: 'Color cobre',
+        en_tip: 'Reddish brown'
+    },
+    herrumbre: {
+        codes: ['A2522B'],
+        es: 'Herrumbre',
+        en: 'Rust',
+        es_tip: 'Hierro oxidado',
+        en_tip: 'Iron oxide, orange-red-brown'
+    },
 }
 
 
