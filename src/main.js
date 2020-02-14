@@ -74,8 +74,8 @@ const colorsList = {
         codes: ['673147'],
         es: 'Borgoña',
         en: 'Burgundy',
-        es_tip: '',
-        en_tip: ''
+        es_tip: 'Color del vino',
+        en_tip: 'Wine color'
     },
     sinople: {
         codes: ['008f4c'],
@@ -88,8 +88,8 @@ const colorsList = {
         codes: ['1f533f', '12774f'],
         es: 'Malaquito',
         en: 'Malachite',
-        es_tip: 'Verde',
-        en_tip: 'Green',
+        es_tip: 'Verde malaquito',
+        en_tip: 'Malachite green',
     },
     jade: {
         codes: ['08a86b'],
