@@ -6,11 +6,9 @@
       <template v-for="color in propColorList"  >
           <div :key="'space_'+color.codes"></div>
           <div :key="'text_'+color.codes">{{color[$i18n.locale]}}</div>
-          <b-tooltip :key="'color_'+color.codes" 
-            :label="color[$i18n.locale+'_tip']" 
-            type="is-light">
-            <div class="colorDisplay" v-bind:style="{ backgroundColor: '#'+color.codes[0]}"> </div>
-        </b-tooltip>
+          <div :key="'color_'+color.codes" class="colorDisplay tooltip" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">
+            <span class="tooltiptext" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">{{color[$i18n.locale+'_tip']}}</span>
+          </div>
       </template>    
   </div>
 </template>
@@ -28,7 +26,7 @@ export default {
 <style scoped>
 #ColorList{
     width: 80%;
-    margin-top: 10px;
+    margin: 10px 0 80px;
     padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 4fr 8fr;
@@ -42,6 +40,31 @@ export default {
     height: 25px;
     width: 100%;
     border: 2px solid white;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 @media screen and (min-width: 600px) {
   #ColorList{
