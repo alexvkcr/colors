@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
 import vuetify from './plugins/vuetify'
-import VTooltip from 'v-tooltip'
+import { Tooltip } from 'buefy'
 
 import App from './App.vue'
 
@@ -12,7 +12,7 @@ import Play from './components/Play.vue'
 import HowTo from './components/HowTo.vue'
 
 Vue.config.productionTip = false
-Vue.use(VTooltip)
+Vue.use(Tooltip)
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
