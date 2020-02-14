@@ -6,7 +6,7 @@
       <template v-for="color in propColorList"  >
           <div :key="color.codes"></div>
           <div :key="color.codes">{{color[$i18n.locale]}}</div>
-          <div :key="color.codes" class="colorDisplay" v-bind:style="{ backgroundColor: '#'+color.codes[0]}"> </div>
+          <div :key="color.codes" class="colorDisplay" v-bind:style="{ backgroundColor: '#'+color.codes[0]}" v-tooltip="color[$i18n.locale+'_tip']"> </div>
       </template>    
   </div>
 </template>
