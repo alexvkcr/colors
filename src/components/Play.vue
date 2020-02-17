@@ -5,23 +5,19 @@
 </template>
 
 <script>
-import ColorNames from './ColorNames.vue';
-import NameColors from './NameColors.vue';
 
 export default {
-  name: 'Play',   
-  props: {     
-    component: Boolean   
-    },    
-    computed: {     
-      dynamicComponent() {       
-      if(component) {         
-        return 'name-colors';       
-      } else {         
-        return 'color-names';       
-        }    
-      }   
-    } 
+  name: 'Play',  
+  data() {
+     return {
+       dataComp: 'NameColors'
+     }
+   },
+  computed: {     
+    dynamicComponent() { 
+      return () => import(`./${this.dataComp}.vue`)
+    }   
+  } 
 }
 </script>
 
