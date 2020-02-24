@@ -48,13 +48,6 @@ export default {
         es_tip: 'Marrón amarillento',
         en_tip: 'Yellowish brown'
     },
-    borgoña: {
-        codes: ['673147'],
-        es: 'Borgoña',
-        en: 'Burgundy',
-        es_tip: 'Color del vino',
-        en_tip: 'Wine color'
-    },
     sinople: {
         codes: ['008f4c'],
         es: 'Sinople',
@@ -132,12 +125,33 @@ export default {
         es_tip: 'Amarillo ámbar',
         en_tip: 'Amber yellow'
     },
+    durazno: {
+        codes: ['FFDAB9'],
+        es: 'Durazno',
+        en: 'Peach',
+        es_tip: 'Color melocotón',
+        en_tip: 'Peach color'
+    },
+    gamuza: {
+        codes: ['E8BD85'],
+        es: 'Gamuza',
+        en: 'Chamois',
+        es_tip: 'Naranja claro, saturación moderada',
+        en_tip: 'Light orange, light saturation'
+    },
     terracota: {
         codes: ['C89C7D'],
         es: 'Terracota',
         en: 'Terra cotta',
         es_tip: 'Naranja rojizo',
         en_tip: 'Reddish orange'
+    },
+    ante: {
+        codes: ['BF8F4E'],
+        es: 'Ante',
+        en: 'Buff',
+        es_tip: 'Marrón textil',
+        en_tip: 'Textil brown'
     },
     cobrizo: {
         codes: ['CB6D51'],
@@ -153,32 +167,18 @@ export default {
         es_tip: 'Hierro oxidado',
         en_tip: 'Iron oxide, orange-red-brown'
     },
-    gamuza: {
-        codes: ['E8BD85'],
-        es: 'Gamuza',
-        en: 'Chamois',
-        es_tip: 'Naranja claro, saturación moderada',
-        en_tip: 'Light orange, light saturation'
-    },
-    ante: {
-        codes: ['BF8F4E'],
-        es: 'Ante',
-        en: 'Buff',
-        es_tip: 'Marrón textil',
-        en_tip: 'Textil brown'
-    },
     siena: {
         codes: ['882D17'],
         es: 'Siena',
         en: 'Sienna',
-        es_tip: 'Marrón pintura rupestre',
-        en_tip: 'Cave paintings brown'
+        es_tip: 'Marrón rojizo pintura rupestre',
+        en_tip: 'Cave paintings reddish brown'
     },
-    durazno: {
-        codes: ['FFDAB9'],
-        es: 'Durazno',
-        en: 'Peach',
-        es_tip: 'Color melocotón',
-        en_tip: 'Peach color'
+    borgoña: {
+        codes: ['673147'],
+        es: 'Borgoña',
+        en: 'Burgundy',
+        es_tip: 'Color del vino',
+        en_tip: 'Wine color'
     },
 }
