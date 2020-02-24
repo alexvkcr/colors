@@ -153,4 +153,32 @@ export default {
         es_tip: 'Hierro oxidado',
         en_tip: 'Iron oxide, orange-red-brown'
     },
+    gamuza: {
+        codes: ['E8BD85'],
+        es: 'Gamuza',
+        en: 'Chamois',
+        es_tip: 'Naranja claro, saturación moderada',
+        en_tip: 'Light orange, light saturation'
+    },
+    ante: {
+        codes: ['BF8F4E'],
+        es: 'Ante',
+        en: 'Buff',
+        es_tip: 'Marrón textil',
+        en_tip: 'Textil brown'
+    },
+    siena: {
+        codes: ['882D17'],
+        es: 'Siena',
+        en: 'Sienna',
+        es_tip: 'Marrón pintura rupestre',
+        en_tip: 'Cave paintings brown'
+    },
+    durazno: {
+        codes: ['FFDAB9'],
+        es: 'Durazno',
+        en: 'Peach',
+        es_tip: 'Color melocotón',
+        en_tip: 'Peach color'
+    },
 }
