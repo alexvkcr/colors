@@ -97,6 +97,13 @@ export default {
         es_tip: 'Verde cartujo',
         en_tip: 'Chartreuse green'
     },
+    gualda: {
+        codes: ['FABD00'],
+        es: 'Gualdo',
+        en: 'Goldtone',
+        es_tip: 'Amarillo heráldico, de la bandera de españa',
+        en_tip: "Heraldic yellow (Spanish flag)"
+    },
     hansa: {
         codes: ['FFDD00'],
         es: 'Hansa',
@@ -180,5 +187,26 @@ export default {
         en: 'Burgundy',
         es_tip: 'Color del vino',
         en_tip: 'Wine color'
+    },
+    bermellon: {
+        codes: ['E62E00'],
+        es: 'Bermellón',
+        en: 'Vermilion',
+        es_tip: 'Rojo con toque naranja',
+        en_tip: 'Orange-coloured red'
+    },
+    violin: {
+        codes: ['A10684'],
+        es: 'Violín',
+        en: 'Violine',
+        es_tip: 'Violeta purpureo',
+        en_tip: 'Purple violet'
+    },
+    malva: {
+        codes: ['E0B0FF'],
+        es: 'Malva',
+        en: 'Mauve',
+        es_tip: 'Purpura brillante',
+        en_tip: 'Brilliant purple'
     },
 }
