@@ -188,13 +188,6 @@ export default {
         es_tip: 'Color del vino',
         en_tip: 'Wine color'
     },
-    bermellon: {
-        codes: ['E62E00'],
-        es: 'Bermellón',
-        en: 'Vermilion',
-        es_tip: 'Rojo con toque naranja',
-        en_tip: 'Orange-coloured red'
-    },
     violin: {
         codes: ['A10684'],
         es: 'Violín',
@@ -208,5 +201,47 @@ export default {
         en: 'Mauve',
         es_tip: 'Purpura brillante',
         en_tip: 'Brilliant purple'
+    },
+    caoba: {
+        codes: ['C04000'],
+        es: 'Caoba',
+        en: 'Mahogany ',
+        es_tip: 'Rojo madera',
+        en_tip: 'Wooden red'
+    },
+    gules: {
+        codes: ['ed1c24 '],
+        es: 'Gulés',
+        en: 'Gules',
+        es_tip: 'Rojo heráldico, intenso',
+        en_tip: 'Heraldic red, intense'
+    },
+    bermellon: {
+        codes: ['E62E00'],
+        es: 'Bermellón',
+        en: 'Vermilion',
+        es_tip: 'Rojo con toque naranja',
+        en_tip: 'Orange-coloured red'
+    },
+    carmesí: {
+        codes: ['A51C30'],
+        es: 'Carmesí',
+        en: 'Crimson',
+        es_tip: 'Rojo fuerte purpureo ',
+        en_tip: 'Strong purplish red'
+    },
+    borgoña: {
+        codes: ['673147'],
+        es: 'Borgoña',
+        en: 'Burgundy',
+        es_tip: 'Rojo vino',
+        en_tip: 'Wine red'
+    },
+    carmín: {
+        codes: ['960018'],
+        es: 'Carmin',
+        en: 'Carmine',
+        es_tip: 'Rojo oscuro levemente purpureo',
+        en_tip: 'Slightly purplish dark red'
     },
 }
