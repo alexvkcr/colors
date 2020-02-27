@@ -13,6 +13,20 @@ export default {
         es_tip: 'Negro pardo cuero',
         en_tip: 'Leather dark brown'
     },
+    umbra: {
+        codes: ['635147'],
+        es: 'Umbra',
+        en: 'Umber',
+        es_tip: 'Marrón rojizo',
+        en_tip: 'Reddish-brown '
+    },
+    bistre: {
+        codes: ['967117'],
+        es: 'Bistre',
+        en: 'Bistre',
+        es_tip: 'Marrón amarillento',
+        en_tip: 'Yellowish brown'
+    },
     grisPayne: {
         codes: ['536878'],
         es: 'Gris Payne',
@@ -33,20 +47,6 @@ export default {
         en: 'Feldgrau',
         es_tip: 'Gris campaña',
         en_tip: 'Field Grey'
-    },
-    umbra: {
-        codes: ['635147'],
-        es: 'Umbra',
-        en: 'Umber',
-        es_tip: 'Marrón rojizo',
-        en_tip: 'Reddish-brown '
-    },
-    bistre: {
-        codes: ['967117'],
-        es: 'Bistre',
-        en: 'Bistre',
-        es_tip: 'Marrón amarillento',
-        en_tip: 'Yellowish brown'
     },
     sinople: {
         codes: ['008f4c'],
