@@ -237,4 +237,39 @@ export default {
         es_tip: 'Rojo madera',
         en_tip: 'Wooden red'
     },
+    escarlata: {
+        codes: ['ff0040'],
+        es: 'Escarlata',
+        en: 'Scarlet',
+        es_tip: 'Rojo brillante',
+        en_tip: 'Bright red'
+    },
+    cardenal: {
+        codes: ['C41E3A'],
+        es: 'Cardenal',
+        en: 'Cardinal',
+        es_tip: 'Rojo vivo, toque rosa',
+        en_tip: 'Alive red, a touch of pink'
+    },
+    granate: {
+        codes: ['ab2a3e '],
+        es: 'Granate',
+        en: 'Maroon',
+        es_tip: 'Rojo oscuro de la granada',
+        en_tip: 'Dark red from pomegranate'
+    },
+    rubí: {
+        codes: ['E0115F'],
+        es: 'Rubí',
+        en: 'Ruby',
+        es_tip: 'Rojo oscuro vivo',
+        en_tip: 'Vivid dark red'
+    },
+    amaranto: {
+        codes: ['FF355E'],
+        es: 'Amaranto',
+        en: 'Amaranth',
+        es_tip: 'Rosa rojizo',
+        en_tip: 'Reddish pink'
+    },
 }
