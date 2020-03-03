@@ -6,8 +6,6 @@ export default {
         es_tip: 'Negro heráldico',
         en_tip: 'Heraldic black',
         available_in_es: true,
-        available_in_en: true,
-        available_in_es: true,
         available_in_en: true
     },
     cordoban: {
@@ -16,18 +14,6 @@ export default {
         en: 'Cordovan',
         es_tip: 'Negro pardo cuero',
         en_tip: 'Leather dark brown',
-        available_in_es: true,
-        available_in_en: true,
-        available_in_es: true,
-        available_in_en: true,
-        available_in_es: true,
-        available_in_en: true,
-        available_in_es: true,
-        available_in_en: true,
-        available_in_es: true,
-        available_in_en: true,
-        available_in_es: true,
-        available_in_en: true,
         available_in_es: true,
         available_in_en: true
     },
