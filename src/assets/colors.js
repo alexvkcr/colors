@@ -77,7 +77,6 @@ export default {
         en: 'Malachite',
         es_tip: 'Verde malaquito',
         en_tip: 'Malachite green',
-        ,
         available_in_es: true,
         available_in_en: true
     },
