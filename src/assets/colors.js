@@ -386,4 +386,40 @@ export default {
         available_in_es: true,
         available_in_en: false
     },
+    turquí: {
+        codes: ['122562'],
+        es: 'Turquí',
+        en: 'Navy blue',
+        es_tip: 'Azul oscuro profundo',
+        en_tip: 'Dark shade of blue',
+        available_in_es: true,
+        available_in_en: true
+    },
+    cobalto: {
+        codes: ['0047AB'],
+        es: 'Cobalto',
+        en: 'Cobalt',
+        es_tip: 'Azul Cobalto',
+        en_tip: 'Cobalt blue',
+        available_in_es: true,
+        available_in_en: true
+    },
+    cobaltoClaro: {
+        codes: ['091F92'],
+        es: 'Cobalto Claro',
+        en: 'Light Cobalt',
+        es_tip: 'Azul Cobalto claro',
+        en_tip: 'Light Cobalt blue',
+        available_in_es: true,
+        available_in_en: true
+    },
+    cobaltoOscuro: {
+        codes: ['004F79'],
+        es: 'Cobalto Oscuro',
+        en: 'Dark Cobalt',
+        es_tip: 'Azul Cobalto Oscuro',
+        en_tip: 'Dark Cobalt blue',
+        available_in_es: true,
+        available_in_en: true
+    },
 }
