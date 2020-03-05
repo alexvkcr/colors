@@ -4,11 +4,13 @@
       <div class="header">Nombre</div>
       <div class="header">Color</div>
       <template v-for="color in propColorList"  >
+        <template v-if="color['available_in_'+$i18n.locale]"  >
           <div :key="'space_'+color.codes"></div>
           <div :key="'text_'+color.codes">{{color[$i18n.locale]}}</div>
           <div :key="'color_'+color.codes" class="colorDisplay tooltip" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">
             <span class="tooltiptext" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">{{color[$i18n.locale+'_tip']}}</span>
-          </div>
+          </div>  
+        </template>    
       </template>    
   </div>
 </template>
