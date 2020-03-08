@@ -55,6 +55,14 @@ h2,h3{
     margin: 30px 0;
     text-align: center;
 }
+p,select{
+  width: 7em;
+}
+select{
+  background-color: aliceblue;
+  border-style: outset;
+  border-radius: 5px;
+}
 .select{
   position: relative;
   bottom: 30px;
