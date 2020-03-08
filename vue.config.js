@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: '/',
+    publicPath: '/colors/',
     pluginOptions: {
         i18n: {
             locale: 'en',
