@@ -6,10 +6,6 @@ import vuetify from './plugins/vuetify'
 import App from './App.vue'
 
 
-import Presentation from './components/Presentation.vue'
-import Play from './components/Play.vue'
-import HowTo from './components/HowTo.vue'
-
 Vue.config.productionTip = false
 Vue.use(VueI18n)
 Vue.use(VueRouter)
@@ -22,9 +18,9 @@ import colorsList from './assets/colors.js';
 
 
 const routes = [
-    { name: 'Index', path: '/', component: Presentation },
-    { name: 'Play', path: '/play', component: Play },
-    { name: 'HowTo', path: '/howto', component: HowTo, props: { propColorList: colorsList } }
+    { name: 'Index', path: '/', component: ()=> import(/* webpackChunkName: "presentation" */'./components/Presentation.vue') },
+    { name: 'Play', path: '/play', component: ()=> import(/* webpackChunkName: "play" */'./components/Play.vue') },
+    { name: 'HowTo', path: '/howto', component: ()=> import(/* webpackChunkName: "howTo" */'./components/HowTo.vue'), props: { propColorList: colorsList } }
 ]
 
 
