@@ -1,6 +1,7 @@
 <template>
   <div class="NameColors">
     Name colors
+    No disponblie aún!
   </div>
 </template>
 

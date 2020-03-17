@@ -1,6 +1,7 @@
 <template>
   <div class="ColorNames">
     Color Names
+    En desarrollo
   </div>
 </template>
 
