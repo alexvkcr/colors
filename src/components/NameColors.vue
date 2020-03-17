@@ -1,6 +1,6 @@
 <template>
   <div class="NameColors">
-    NAme colors
+    Name colors
   </div>
 </template>
 
