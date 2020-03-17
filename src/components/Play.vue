@@ -1,42 +1,62 @@
 <template>
   <div class="Play">
-    <button type="button" class="change" v-on:click="changeComp()">Click Me!</button>
-    <component :is="dynamicComponent"></component> 
+    <button type="button" class="change" v-on:click="changeComp()">{{ $t('changeGame') }}!</button>
+    <name-colors v-if="compName"></name-colors>
+    <color-names v-if="compColor"></color-names>
   </div>
 </template>
+
+<i18n>
+{
+  "es": {
+    "changeGame": "Cambiar de juego"
+  },
+  "en": {
+    "changeGame": "Change the game"
+  }
+}
+</i18n>
 
 <script>
 
 export default {
   name: 'Play',  
-  data() {
-     return {
-       dataComp: 'NameColors'
-     }
-   },
-  computed: {     
-    dynamicComponent() { 
-      return () => import(`./${this.dataComp}.vue`)
-    }   
-  },
+  data: () => ({
+    compName: false, 
+    compColor: true
+  }),  
   methods: {
     changeComp(){
-      if(this.dataComp=='NameColors'){
-        this.dataComp='ColorNames'
-        console.log('ColorNames')
+      if(this.compColor){
+        this.compName = true
+        this.compColor = false
         return
       }
-      if(this.dataComp=='ColorNames'){
-        console.log('NameColors')
-        this.dataComp='NameColors'
+      if(this.compName){
+        this.compColor = true
+        this.compName = false
       }
     }
+  },
+  components:{
+    colorNames: () => import(/* webpackChunkName: "colorNames" */'./ColorNames.vue'),
+    nameColors: () => import(/* webpackChunkName: "nameColors" */'./NameColors.vue'),
   }
 }
 </script>
 
 <style scoped>
 .change{
-  background-color: bisque;
+  position: relative;
+  top: 20px;
+  left: 60%;
+  background-color: white;
 }
+
+@media screen and (min-width: 600px) {
+  .change{
+    left: 75%;
+  }
+}
+
 </style>
