@@ -422,4 +422,49 @@ export default {
         available_in_es: true,
         available_in_en: true
     },
+    lapislazuli: {
+        codes: ['4273B8'],
+        es: 'Lapislázuli',
+        en: 'Lapis laculi',
+        es_tip: 'Azul marino templado',
+        en_tip: 'Mild navy blue',
+        available_in_es: true,
+        available_in_en: true
+    },
+    cerúleo: {
+        codes: ['08457E'],
+        es: 'Cerúleo',
+        en: 'Cerulean',
+        es_tip: 'Mitad azul mitad verde',
+        en_tip: 'Medium blue with a greenish touch',
+        available_in_es: true,
+        available_in_en: true
+    },
+    azulCerúleo: {
+        codes: ['0098D5'],
+        es: 'Azul cerúleo',
+        en: 'Cerulean blue',
+        es_tip: 'Azul con un toque verde',
+        en_tip: 'Blue with a touch of green',
+        available_in_es: true,
+        available_in_en: true
+    },
+    cerúleoOscuro: {
+        codes: ['08457E'],
+        es: 'Cerúleo oscuro',
+        en: 'Dark Cerulean',
+        es_tip: 'Azul oscuro con toque verdoso',
+        en_tip: 'Dark blue with greenish touch',
+        available_in_es: true,
+        available_in_en: true
+    },
+    azur: {
+        codes: ['0066FF'],
+        es: 'Azur',
+        en: 'Azure',
+        es_tip: 'Azul heráldico',
+        en_tip: 'Heraldic blue',
+        available_in_es: true,
+        available_in_en: true
+    },
 }
