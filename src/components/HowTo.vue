@@ -3,7 +3,7 @@
     <p>{{ $t('explanation') }}</p>
     <p>{{ $t('yourBrain') }}</p>
     <p>{{ $t('hereYouHave') }}</p>
-    <color-list :prop-color-list="propColorList"></color-list>
+    <color-list :prop-colour-list="propColourList"></color-list>
   </div>
 </template>
 
@@ -24,13 +24,12 @@
 </i18n>
 
 <script>
-
 import ColorList from './ColorList.vue';
 
 export default {
   name: 'HowTo',
   props: {
-    'propColorList': Object
+    'propColourList': Object
   },
   components: {
     ColorList

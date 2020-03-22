@@ -1,8 +1,8 @@
 <template>
   <div class="Play">
     <button type="button" class="change" v-on:click="changeComp()">{{ $t('changeGame') }}!</button>
-    <name-colors v-if="compName"></name-colors>
-    <color-names v-if="compColor"></color-names>
+    <name-colors v-if="compName" :prop-colour-list="propColourList"></name-colors>
+    <color-names v-if="compColor" :prop-colour-list="propColourList"></color-names>
   </div>
 </template>
 
@@ -20,7 +20,10 @@
 <script>
 
 export default {
-  name: 'Play',  
+  name: 'Play',
+  props: {
+    'propColourList': Object
+  },
   data: () => ({
     compName: false, 
     compColor: true
@@ -48,9 +51,9 @@ export default {
 <style scoped>
 .change{
   position: relative;
-  top: 20px;
   left: 60%;
-  background-color: white;
+  background-color: lightcoral;
+  border-radius: 3px;
 }
 
 @media screen and (min-width: 600px) {
