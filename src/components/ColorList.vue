@@ -1,9 +1,9 @@
 <template>
   <div id="ColorList">
       <div class="header"></div>
-      <div class="header">Nombre</div>
-      <div class="header">Color</div>
-      <template v-for="color in propColorList"  >
+      <div class="header">{{ $t('name') }}</div>
+      <div class="header">{{ $t('colour') }}</div>
+      <template v-for="color in propColourList"  >
         <template v-if="color['available_in_'+$i18n.locale]"  >
           <div :key="'space_'+color.codes"></div>
           <div :key="'text_'+color.codes">{{color[$i18n.locale]}}</div>
@@ -16,11 +16,24 @@
 </template>
 
 
+<i18n>
+{
+  "es": {
+    "name": "Nombre",
+    "colour": "Color"
+  },
+  "en": {
+    "name": "Name",
+    "colour": "Color"
+  }
+}
+</i18n>
+
 <script>
 export default {
   name: 'ColorList',
   props: {
-      'propColorList': Object
+      'propColourList': Object
   }
 }
 </script>
