@@ -42,8 +42,8 @@ export default {
     }
   },
   components:{
-    colorNames: () => import(/* webpackChunkName: "colorNames" */'./ColorNames.vue'),
-    nameColors: () => import(/* webpackChunkName: "nameColors" */'./NameColors.vue'),
+    colourNames: () => import(/* webpackChunkName: "colourNames" */'./ColourNames.vue'),
+    nameColours: () => import(/* webpackChunkName: "nameColours" */'./NameColours.vue'),
   }
 }
 </script>
