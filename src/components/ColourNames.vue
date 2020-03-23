@@ -1,41 +1,45 @@
 <template>
-  <div id="ColorNames">
-    <p class="mob-set">1 {{$t('colour')}} ->4{{$t('options')}}</p>
-    <p class="mob-set" v-bind:id="'name'" v-bind:attr-id="'id'+randomColour.codes[0]">{{ randomColour[$i18n.locale] }}</p>
-    <p class="mob-set colorDisplay" 
-      v-bind:style="{ backgroundColor: '#'+randomColours[0].codes[0]}" 
-      v-bind:attr-id="'id'+randomColours[0].codes[0] "
-      v-on:click="isCorrect($event)"> </p>
-    <p class="mob-set colorDisplay" 
-      v-bind:style="{ backgroundColor: '#'+randomColours[1].codes[0]}" 
-      v-bind:attr-id="'id'+randomColours[1].codes[0] "
-      v-on:click="isCorrect($event)"> </p>
-    <p class="mob-set colorDisplay" 
-      v-bind:style="{ backgroundColor: '#'+randomColours[2].codes[0]}" 
-      v-bind:attr-id="'id'+randomColours[2].codes[0] "
-      v-on:click="isCorrect($event)"> </p>
-    <p class="mob-set colorDisplay" 
-      v-bind:style="{ backgroundColor: '#'+randomColours[3].codes[0]}" 
-      v-bind:attr-id="'id'+randomColours[3].codes[0] "
-      v-on:click="isCorrect($event)"> </p>
+  <div id="ColourNames">
+    <p class="mob-set">1 {{$t('colourName')}} ->4{{$t('options')}}</p>
+    <p class="mob-set colorDisplay"
+      v-bind:id="'colour'" 
+      v-bind:style="{ backgroundColor: '#'+randomColour.codes[0]}" 
+      v-bind:attr-id="'id'+randomColour.codes[0] ">
+    </p>
+    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[0].codes[0]"
+      v-on:click="isCorrect($event)">
+    {{ randomColours[0][$i18n.locale] }}
+    </p>
+    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[1].codes[0]"
+      v-on:click="isCorrect($event)">
+    {{ randomColours[1][$i18n.locale] }}
+    </p>
+    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[2].codes[0]"
+      v-on:click="isCorrect($event)">
+    {{ randomColours[2][$i18n.locale] }}
+    </p>
+    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[3].codes[0]"
+      v-on:click="isCorrect($event)">
+    {{ randomColours[3][$i18n.locale] }}
+    </p>
   </div>
 </template>
 
 <i18n>
 {
   "es": {
-    "colour": "Color",
+    "colourName": "Nombre del color",
     "options": "Opciones"
   },
   "en": {
-    "colour": "Color",
+    "colourName": "Colour name",
     "options": "Options"
   }
 }
 </i18n>
 <script>
 export default {
-  name: 'ColorNames',
+  name: 'ColourNames',
   props: {
       'propColourList': Object
   },
@@ -87,22 +91,27 @@ export default {
      * It recharges the component after result message
      */
     isCorrect(){
-      let nameId = document.querySelector('#name').attributes['attr-id']
+      let colourId = document.querySelector('#colour').attributes['attr-id']
       let clickAttrId = event.target.attributes['attr-id'];
-      return this.showPopUp(nameId,clickAttrId)
+      return this.showPopUp(colourId,clickAttrId)
     },
     /**
      * This methdos show a pop up, it depends if it correct or wrong
      */
     showPopUp(gameId,clickId){
       console.log(gameId.value==clickId.value)
+      if(gameId.value==clickId.value){
+        alert("Correcto")
+        this.$emit('reload')
+      }else
+        alert ("Errore")
     }
   }
 }
 </script>
 
 <style scoped>
-#ColorNames{
+#ColourNames{
     width: 100%;
     padding: 30px 10px 80px 10px;
     background-color: white;
@@ -119,7 +128,7 @@ export default {
 }
 
 @media screen and (min-width: 600px) {
-  #ColorNames{
+  #ColourNames{
     max-width: 600px;
   }
 }
