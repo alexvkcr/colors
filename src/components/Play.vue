@@ -1,8 +1,8 @@
 <template>
   <div class="Play">
     <button type="button" class="change" v-on:click="changeComp()">{{ $t('changeGame') }}!</button>
-    <name-colors v-if="compName" :prop-colour-list="propColourList"></name-colors>
-    <color-names v-if="compColor" :prop-colour-list="propColourList"></color-names>
+    <name-colours v-if="compName" :prop-colour-list="propColourList" @reload="forceRerenderNC"></name-colours>
+    <colour-names v-if="compColour" :prop-colour-list="propColourList" @reload="forceRerenderCN"></colour-names>
   </div>
 </template>
 
@@ -26,19 +26,33 @@ export default {
   },
   data: () => ({
     compName: false, 
-    compColor: true
+    compColour: true,
+    componentKeyNC: 0,
+    componentKeyCN: 0
   }),  
   methods: {
     changeComp(){
-      if(this.compColor){
+      if(this.compColour){
         this.compName = true
-        this.compColor = false
+        this.compColour = false
         return
       }
       if(this.compName){
-        this.compColor = true
+        this.compColour = true
         this.compName = false
       }
+    },
+    forceRerenderNC() {
+      this.compName = false
+      this.$nextTick(() => {
+        this.compName = true
+      });
+    },
+    forceRerenderCN() {
+      this.compColour = false
+      this.$nextTick(() => {
+        this.compColour = true
+      });
     }
   },
   components:{
