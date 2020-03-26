@@ -1,6 +1,7 @@
 <template>
   <div class="Play">
-    <button type="button" class="change" v-on:click="changeComp()">{{ $t('changeGame') }}!</button>
+    <counter :prop-correct-answers="correctAnswers"></counter>
+    <button type="button" class="change" v-on:click="changeComp()">{{ $t('exclamationStart') }}{{ $t('changeGame') }}!</button>
     <name-colours v-if="compName" :prop-colour-list="propColourList" @reload="forceRerenderNC"></name-colours>
     <colour-names v-if="compColour" :prop-colour-list="propColourList" @reload="forceRerenderCN"></colour-names>
   </div>
@@ -9,15 +10,18 @@
 <i18n>
 {
   "es": {
+    "exclamationStart": "¡",
     "changeGame": "Cambiar de juego"
   },
   "en": {
+    "exclamationStart": " ",
     "changeGame": "Change the game"
   }
 }
 </i18n>
 
 <script>
+import Counter from './Counter.vue';
 
 export default {
   name: 'Play',
@@ -28,7 +32,8 @@ export default {
     compName: false, 
     compColour: true,
     componentKeyNC: 0,
-    componentKeyCN: 0
+    componentKeyCN: 0,
+    correctAnswers: 0
   }),  
   methods: {
     changeComp(){
@@ -43,12 +48,14 @@ export default {
       }
     },
     forceRerenderNC() {
+      this.correctAnswers = this.correctAnswers + 1
       this.compName = false
       this.$nextTick(() => {
         this.compName = true
       });
     },
     forceRerenderCN() {
+      this.correctAnswers = this.correctAnswers + 1
       this.compColour = false
       this.$nextTick(() => {
         this.compColour = true
@@ -56,6 +63,7 @@ export default {
     }
   },
   components:{
+    Counter,
     colourNames: () => import(/* webpackChunkName: "colourNames" */'./ColourNames.vue'),
     nameColours: () => import(/* webpackChunkName: "nameColours" */'./NameColours.vue'),
   }
