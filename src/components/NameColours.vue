@@ -1,6 +1,6 @@
 <template>
   <div id="NameColours">
-    <p class="mob-set">1 {{$t('colour')}} ->4{{$t('options')}}</p>
+    <p class="mob-set">1 {{$t('colour')}} -> 4 {{$t('options')}}</p>
     <p class="mob-set" v-bind:id="'name'" v-bind:attr-id="'id'+randomColour.codes[0]">{{ randomColour[$i18n.locale] }}</p>
     <p class="mob-set colorDisplay" 
       v-bind:style="{ backgroundColor: '#'+randomColours[0].codes[0]}" 

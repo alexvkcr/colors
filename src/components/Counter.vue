@@ -10,12 +10,12 @@
   "es": {
     "exclamationStart": "¡",
     "youHave": "Llevas",
-    "correctanswers": "Aciertos"
+    "correctAnswers": "Aciertos"
   },
   "en": {
     "exclamationStart": " ",
     "youHave": "You've got",
-    "correctanswers": "correct answers"
+    "correctAnswers": "correct answers"
   }
 }
 </i18n>
