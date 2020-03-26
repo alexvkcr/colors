@@ -117,15 +117,22 @@ export default {
 }
 
 .colorDisplay{
-    height: 25px;
-    width: 80px;
-    border: 2px solid white;
-    margin-left:20%;
+  width: 100px;
+  border: 0.2px solid black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px 4px 6px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {
   #NameColours{
     max-width: 600px;
+  }
+  .colorDisplay:hover{
+    border: 0.2px solid white;
   }
 }
 </style>
