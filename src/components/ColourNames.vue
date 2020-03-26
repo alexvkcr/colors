@@ -6,19 +6,19 @@
       v-bind:style="{ backgroundColor: '#'+randomColour.codes[0]}" 
       v-bind:attr-id="'id'+randomColour.codes[0] ">
     </p>
-    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[0].codes[0]"
+    <p class="mob-set button"  v-bind:attr-id="'id'+randomColours[0].codes[0]"
       v-on:click="isCorrect($event)">
     {{ randomColours[0][$i18n.locale] }}
     </p>
-    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[1].codes[0]"
+    <p class="mob-set button"  v-bind:attr-id="'id'+randomColours[1].codes[0]"
       v-on:click="isCorrect($event)">
     {{ randomColours[1][$i18n.locale] }}
     </p>
-    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[2].codes[0]"
+    <p class="mob-set button"  v-bind:attr-id="'id'+randomColours[2].codes[0]"
       v-on:click="isCorrect($event)">
     {{ randomColours[2][$i18n.locale] }}
     </p>
-    <p class="mob-set"  v-bind:attr-id="'id'+randomColours[3].codes[0]"
+    <p class="mob-set button"  v-bind:attr-id="'id'+randomColours[3].codes[0]"
       v-on:click="isCorrect($event)">
     {{ randomColours[3][$i18n.locale] }}
     </p>
@@ -112,24 +112,40 @@ export default {
 
 <style scoped>
 #ColourNames{
-    width: 100%;
-    padding: 30px 10px 80px 10px;
-    background-color: white;
+  width: 100%;
+  padding: 30px 10px 80px 10px;
+  background-color: white;
+  font-size: 16px;
 }
 .mob-set{
   margin-left:20%;
 }
+.button{
+  background-color: lightgrey;
+  border: 0.2px solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 .colorDisplay{
-    height: 25px;
-    width: 80px;
-    border: 2px solid white;
-    margin-left:20%;
+  width: 100px;
+  border: 2px solid white;
+  margin-left:20%;
+  padding: 16px 32px;
 }
 
 @media screen and (min-width: 600px) {
   #ColourNames{
-    max-width: 600px;
+    max-width: 800px;
+  }
+  .button:hover{
+    border: 0.2px solid white;
+    background-color: lightslategrey;
   }
 }
 </style>
