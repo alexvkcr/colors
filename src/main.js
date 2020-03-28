@@ -20,7 +20,7 @@ import colorsList from './assets/colors.js';
 const routes = [
     { name: 'Index', path: '/colors', component: ()=> import(/* webpackChunkName: "presentation" */'./components/Presentation.vue') },
     { name: 'Play', path: '/play', component: ()=> import(/* webpackChunkName: "play" */'./components/Play.vue'), props: { propColourList: colorsList } },
-    { name: 'HowTo', path: '/howto', component: ()=> import(/* webpackChunkName: "howTo" */'./components/HowTo.vue'), props: { propColourList: colorsList } }
+    { name: 'About', path: '/about', component: ()=> import(/* webpackChunkName: "about" */'./components/About.vue'), props: { propColourList: colorsList } }
 ]
 
 
