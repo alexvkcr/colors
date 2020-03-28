@@ -1,14 +1,21 @@
 <template>
-  <div class="Presentation">
-    <h2>{{ $t('welcome') }}</h2>
-    <div class="select">
-      <p>{{$t('change')}}</p>
-      <select v-model="$root.$i18n.locale">
-        <option value="en">{{$t('en')}}</option>
-        <option value="es">{{$t('es')}}</option>
-      </select>
+  <div id="Presentation">
+    <div class="play">{{$t('play')}}</div>
+    <div class="coloured-section">
+      <h2>{{ $t('welcome') }}</h2>
+      <div class="select-group">
+        <p>{{$t('change')}}</p>
+        <select class="language" v-model="$root.$i18n.locale">
+          <option value="en">{{$t('en')}}</option>
+          <option value="es">{{$t('es')}}</option>
+        </select>
+      </div>
+      <ul class="texts">
+        <li>{{ $t('what') }}</li>
+        <li>{{ $t('what2') }} </li>
+        <li>{{ $t('explanation') }}</li>
+      </ul>
     </div>
-    <h3>{{ $t('learn') }}</h3>
   </div>
 </template>
 
@@ -26,15 +33,21 @@ export default {
 <i18n>
 {
   "es": {
+    "play": "¡JUEGA YA!",
     "welcome": "¡Bienvenidos a GetColors!",
-    "learn": "Aquí puedes aprender los nombres de TODOS los colores existentes",
+    "what": "Esta es una página dónde encontrarás divertidos juegos para entretenerte y convertirte en alguien distinguido que sabe de colores al mismo tiempo.",
+    "what2": "Escoge sabiamente tu juego ya que estos son muy distintos en dificultad.",
+    "explanation": "Encontrarás las instrucciones para cada juego debajo de él cuando lo selecciones.",
     "change": "Cambiar idioma",
     "en": "Inglés",
     "es": "Español"
   },
   "en": {
+    "play": "PLAY NOW!",
     "welcome": "Welcome to GetColors!",
-    "learn": "Here you can learn the name of ALL the existing colors",
+    "what": "This is a web where you'll find fun games to amuse yourself and become someone distiguished whom knwos about colors at the same time",
+    "what2": "Choose wisely your game since they are very different in difficuty",
+    "explanation": "You'll find the instructions for each game under it when you select it",
     "change": "Switch language",
     "en": "English",
     "es": "Spanish"
@@ -46,32 +59,57 @@ export default {
 *{
     color: #2e586c;
 }
-.Presentation{
-    margin: 0 10%;
-    min-width: 250px;
-    background-color: #b8e0dc;
-  }
-h2,h3{
-    margin: 30px 0;
-    text-align: center;
+#Presentation{
+  max-width: 1024px;
 }
-p,select{
-  width: 7em;
+.play{
+  width: 180px;/*margin-left depends on this size */
+  padding: 16px 32px;
+  margin-top: 30px;
+  margin-left: calc(50% - 90px);
+  text-align: center;
+
+  border: 0.8px solid lightyellow;
+  border-radius: 6px;
+  background-color: white;
+  color: darkolivegreen;
+
+  font-weight: bold;
 }
+.play:hover{
+  border: 0.8px solid black;
+  background-color: lightgrey;
+}
+
+.coloured-section{
+  margin: 40px 10%;
+  padding: 10px 20px;
+  min-width: 250px;
+  background-color: #b8e0dc;
+}
+
+h2{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.select-group{
+  display: inline-block;
+  font-weight: bold;
+}
+
 select{
+  width: 7em;
+
   background-color: aliceblue;
   border-style: outset;
   border-radius: 5px;
 }
-.select{
-  position: relative;
-  bottom: 30px;
-  left: 50%;
-}
-@media screen and (min-width: 600px) {
-  .select{
-    left: 90%;
-  }
+
+.texts{
+  display: inline-block;
+  width: 76%;
+  padding: 30px;
 }
 
 </style>

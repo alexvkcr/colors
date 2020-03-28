@@ -7,7 +7,7 @@
 <i18n>
 {
   "es": {
-    "learnColors": "¡Aprende todos los colores!"
+    "learnColors": "¡Todos los colores!"
   },
   "en": {
     "learnColors": "Learn all the colors!"

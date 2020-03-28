@@ -40,8 +40,11 @@ export default {
 </script>
 
 <style scoped>
+*{
+    color: #2e586c;
+}
 .intro, .author{
-  margin-left: 10px;
+  margin: 10px 10px;
 }
 .intro{
   font-size: 16px;
