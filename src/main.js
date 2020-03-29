@@ -30,6 +30,8 @@ const router = new VueRouter({
     routes
 })
 
+import "@/assets/typos.css"
+
 new Vue({
     i18n,
     router,

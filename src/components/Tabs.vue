@@ -40,6 +40,9 @@ export default {
 </script>
 
 <style>
+#Tabs{
+  font-family: 'Clinton';
+}
 h1{
     margin: 30px 0;
     color: #2E6C61;
