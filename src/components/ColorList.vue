@@ -11,7 +11,7 @@
           <div :key="'color_'+color.codes" class="colorDisplay tooltip" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">
             <span class="tooltiptext" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">{{color[$i18n.locale+'_tip']}}</span>
           </div>
-          <div :key="'_'+color.codes"><a :href="color.source" target="_blank">{{ $t('source') }}</a></div>
+          <div :key="'_'+color.codes"><a :href="color.source" target="_blank">{{ $t('goTo') }}</a></div>
         </template>    
       </template>    
   </div>
@@ -23,12 +23,14 @@
   "es": {
     "name": "Nombre",
     "colour": "Color",
-    "source": "Ir a"
+    "source": "Fuente",
+    "goto": "Ir a"
   },
   "en": {
     "name": "Name",
     "colour": "Color",
-    "source": "Go to"
+    "source": "Source",
+    "goTo": "Go to"
   }
 }
 </i18n>
