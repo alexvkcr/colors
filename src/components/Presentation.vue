@@ -1,6 +1,9 @@
 <template>
   <div id="Presentation">
-    <div class="play">{{$t('play')}}</div>
+    <transition name="slide-fade" mode="out-in">
+      <div class="play" v-if="!playOn" @click="openPlay">{{$t('play')}}</div>" mode="in-out">
+      <play v-if="playOn" :prop-colour-list="propColourList"></play>
+    </transition>
     <div class="coloured-section">
       <h2>{{ $t('welcome') }}</h2>
       <div class="select-group">
@@ -22,10 +25,22 @@
 <script>
 export default {
   name: 'Presentation',
+  props: {
+    'propColourList': Object
+  },
+  data: () => ({
+    playOn: false
+  }),  
   methods: {
     onChange(event) {
-        console.log(event.target.value)
+      console.log(event.target.value)
+    },
+    openPlay(){
+      this.playOn=true
     }
+  },
+  components: {
+    play: () => import(/* webpackChunkName: "play" */'./Play.vue'),
   }
 }
 </script>
@@ -80,7 +95,17 @@ export default {
   border: 0.8px solid black;
   background-color: lightgrey;
 }
-
+.slide-fade-enter-active {
+  transition: all .8s ease;
+}
+.slide-fade-leave-active {
+  transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 .coloured-section{
   margin: 40px 10%;
   padding: 10px 20px;

@@ -7,9 +7,6 @@
       <v-tab to="/colors">
         {{ $t('presentation') }}
       </v-tab>
-    <v-tab to="/play">
-        {{ $t('play') }}
-    </v-tab>
     <v-tab to="/about">
         {{ $t('about') }}
     </v-tab>
