@@ -23,12 +23,12 @@
   "es": {
     "name": "Nombre",
     "colour": "Color",
-    "source": "Fuente"
+    "source": "Ir a"
   },
   "en": {
     "name": "Name",
     "colour": "Color",
-    "source": "Source"
+    "source": "Go to"
   }
 }
 </i18n>
