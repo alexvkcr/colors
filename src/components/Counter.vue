@@ -1,6 +1,6 @@
 <template>
   <div id="Counter">
-      {{ $t('exclamationStart') }}{{ $t('youHave') }} {{ propCorrectAnswers }} {{ $t('correctAnswers') }}!
+      {{ $t('exclamationStart') }}{{ $t('youHave') }} {{ propCorrectAnswers }} {{ $tc('correctAnswers', propCorrectAnswers ) }}!
   </div>
 </template>
 
@@ -9,13 +9,13 @@
 {
   "es": {
     "exclamationStart": "¡",
-    "youHave": "Llevas",
-    "correctAnswers": "Aciertos"
+    "youHave": "Racha de",
+    "correctAnswers": "aciertos | acierto | aciertos"
   },
   "en": {
     "exclamationStart": " ",
-    "youHave": "You've got",
-    "correctAnswers": "correct answers"
+    "youHave": " ",
+    "correctAnswers": "correct answers streak | correct answer streak | correct answers streak"
   }
 }
 </i18n>
