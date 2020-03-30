@@ -1,13 +1,32 @@
 <template>
   <div id="Author">
-    Yooo
+    <p>{{$t('author')}}: Alejandro Díaz</p>
+    <p v-on:click="openTwitter()">
+      @alex_vkcr
+    </p>
   </div>
 </template>
 
+<i18n>
+
+{
+  "es": {
+    "author": "Autor"
+  },
+  "en": {
+    "author": "Author"
+  }
+}
+</i18n>
 
 <script>
 export default {
-  name: 'Author'
+  name: 'Author',
+  methods: {
+    openTwitter() {
+      window.open("https://www.twitter.com/alex_vkcr");
+    }
+  }
 }
 </script>
 
