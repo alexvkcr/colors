@@ -129,7 +129,7 @@ export default {
         codes: ['FABD00'],
         es: 'Gualdo',
         en: 'Goldtone',
-        es_tip: 'Amarillo heráldico, de la bandera de españa',
+        es_tip: 'Amarillo heráldico (bandera de españa)',
         en_tip: "Heraldic yellow (Spanish flag)",
         available_in_es: true,
         available_in_en: true
