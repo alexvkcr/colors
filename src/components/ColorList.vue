@@ -3,13 +3,15 @@
       <div class="header"></div>
       <div class="header">{{ $t('name') }}</div>
       <div class="header">{{ $t('colour') }}</div>
+      <div class="header">{{ $t('source') }}</div>
       <template v-for="color in propColourList"  >
         <template v-if="color['available_in_'+$i18n.locale]"  >
           <div :key="'space_'+color.codes"></div>
           <div :key="'text_'+color.codes">{{color[$i18n.locale]}}</div>
           <div :key="'color_'+color.codes" class="colorDisplay tooltip" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">
             <span class="tooltiptext" v-bind:style="{ backgroundColor: '#'+color.codes[0]}">{{color[$i18n.locale+'_tip']}}</span>
-          </div>  
+          </div>
+          <div :key="'_'+color.codes"><a :href="color.source" target="_blank">{{ $t('source') }}</a></div>
         </template>    
       </template>    
   </div>
@@ -20,11 +22,13 @@
 {
   "es": {
     "name": "Nombre",
-    "colour": "Color"
+    "colour": "Color",
+    "source": "Fuente"
   },
   "en": {
     "name": "Name",
-    "colour": "Color"
+    "colour": "Color",
+    "source": "Source"
   }
 }
 </i18n>
@@ -44,9 +48,12 @@ export default {
     margin: 10px 0 80px;
     padding-left: 20px;
     display: grid;
-    grid-template-columns: 1fr 4fr 8fr;
+    grid-template-columns: 1fr 4fr 8fr 8fr;
     grid-auto-rows: 40px;
     grid-gap: 10px;
+}
+.header{
+  font-weight: bold;
 }
 .colorBox{
     display: flex;
@@ -83,7 +90,7 @@ export default {
 }
 @media screen and (min-width: 600px) {
   #ColorList{
-    max-width: 600px;
+    max-width: 800px;
   }
 }
 </style>
