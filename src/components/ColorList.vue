@@ -24,7 +24,7 @@
     "name": "Nombre",
     "colour": "Color",
     "source": "Fuente",
-    "goto": "Ir a"
+    "goTo": "Ir a"
   },
   "en": {
     "name": "Name",
