@@ -279,6 +279,16 @@ export default {
       available_in_en: true,
       source: 'https://encycolorpedia.es/a10684'
     },
+    bígaro:  {
+      codes: ['CCCCFF'],
+      es: 'Bígaro',
+      en: 'Periwinkle',
+      es_tip: 'Violeta azulado claro',
+      en_tip: 'Light bluish violet',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/B%C3%ADgaro_(color)'
+    },
     malva: {
       codes: ['E0B0FF'],
       es: 'Malva',
@@ -508,15 +518,5 @@ export default {
       available_in_es: true,
       available_in_en: true,
       source: 'https://es.wikipedia.org/wiki/Azur'
-    },
-    bígaro:  {
-      codes: ['CCCCFF'],
-      es: 'Bígaro',
-      en: 'Periwinkle',
-      es_tip: 'Violeta azulado claro',
-      en_tip: 'Light bluish violet',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/B%C3%ADgaro_(color)'
     },
 }
