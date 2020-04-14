@@ -1,7 +1,7 @@
 <template>
   <div id="NameColours">
     <p class="mob-set">1 {{$t('colour')}} -> 4 {{$t('options')}}</p>
-    <p class="mob-set" v-bind:id="'name'" v-bind:attr-id="'id'+randomColour.codes[0]">{{ randomColour[$i18n.locale] }}</p>
+    <p class="mob-set name" v-bind:id="'name'" v-bind:attr-id="'id'+randomColour.codes[0]">{{ randomColour[$i18n.locale] }}</p>
     <p class="mob-set colorDisplay" 
       v-bind:style="{ backgroundColor: '#'+randomColours[0].codes[0]}" 
       v-bind:attr-id="'id'+randomColours[0].codes[0] "
@@ -62,12 +62,9 @@ export default {
         };
       let rP =randomProperty(this.propColourList)
       if(rP['available_in_'+this.$i18n.locale]){
-        console.log(rP)
         return rP
       }
       else {
-        console.log('NO')
-        console.log(rP)
         return this.methRandomColour()
       }
     },
@@ -95,12 +92,11 @@ export default {
      * This methdos show a pop up, it depends if it correct or wrong
      */
     showPopUp(gameId,clickId){
-      console.log(gameId.value==clickId.value)
       if(gameId.value==clickId.value){
-        alert("Correcto")
         this.$emit('reload')
-      }else
-        alert ("Errore")
+      }else{
+        this.$emit('fail')
+      }
     }
   }
 }
@@ -119,7 +115,7 @@ export default {
 .colorDisplay{
   width: 100px;
   border: 0.2px solid black;
-  padding: 15px 32px;
+  padding: 20px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -129,7 +125,11 @@ export default {
 
 @media screen and (min-width: 600px) {
   #NameColours{
-    max-width: 600px;
+    max-width: 820px;
+  }
+  .name{
+    padding: 16px 32px;
+    padding: 16px 32px;
   }
   .colorDisplay:hover{
     border: 0.2px solid white;

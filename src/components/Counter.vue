@@ -24,7 +24,7 @@
 export default {
   name: 'Counter',
   props: {
-      'propCorrectAnswers': Object
+      'propCorrectAnswers': Number
   }
 }
 </script>
@@ -32,6 +32,8 @@ export default {
 <style scoped>
 #Counter{
   max-width: 600px;
+  font-family: 'Manoyri';
+  font-size: 18px;
 }
 @media screen and (min-width: 600px) {
   #Counter{

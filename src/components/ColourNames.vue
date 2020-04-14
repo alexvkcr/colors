@@ -66,12 +66,9 @@ export default {
         };
       let rP =randomProperty(this.propColourList)
       if(rP['available_in_'+this.$i18n.locale]){
-        console.log(rP)
         return rP
       }
       else {
-        console.log('NO')
-        console.log(rP)
         return this.methRandomColour()
       }
     },
@@ -99,12 +96,11 @@ export default {
      * This methdos show a pop up, it depends if it correct or wrong
      */
     showPopUp(gameId,clickId){
-      console.log(gameId.value==clickId.value)
       if(gameId.value==clickId.value){
-        alert("Correcto")
         this.$emit('reload')
-      }else
-        alert ("Errore")
+      }else{
+        this.$emit('fail')
+      }
     }
   }
 }
@@ -114,6 +110,7 @@ export default {
 #ColourNames{
   width: 100%;
   padding: 30px 10px 80px 10px;
+  
   background-color: white;
   font-size: 16px;
 }
@@ -136,12 +133,12 @@ export default {
   width: 100px;
   border: 2px solid white;
   margin-left:20%;
-  padding: 16px 32px;
+  padding: 20px 32px;
 }
 
 @media screen and (min-width: 600px) {
   #ColourNames{
-    max-width: 800px;
+    max-width: 820px;
   }
   .button:hover{
     border: 0.2px solid white;
