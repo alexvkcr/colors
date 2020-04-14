@@ -123,7 +123,7 @@ h2{
   font-weight: bold;
 }
 
-select{
+.language{
   width: 7em;
 
   background-color: aliceblue;
@@ -133,8 +133,13 @@ select{
 
 .texts{
   display: inline-block;
-  width: 76%;
+  width: 100%;
   padding: 30px;
+}
+@media screen and (min-width: 600px) {
+  .texts{
+    width: 76%;
+  }
 }
 
 </style>
