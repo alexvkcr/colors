@@ -58,7 +58,14 @@ export default {
   }),  
   methods: {
     changeComp(event){
-      console.log(event.target.value)
+      console.log('We dont use event yet. :'+event.target.value)
+      if(this.gameSelected == 'NameCs'){
+        this.compName = true
+        this.compColour = false
+      }else{
+        this.compName = false
+        this.compColour = true
+      }
     },
     transitionCorrect(){
       this.correct = true
@@ -149,9 +156,6 @@ export default {
   #Play{
     width: 100%;
     margin: 0px 10%;
-  }
-  name-colours,colour-names{
-    max-width: 1024px;
   }
   .change{
     left: 75%;
