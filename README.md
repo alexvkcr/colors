@@ -36,7 +36,7 @@ npm run lint
  git branch -D gh-pages
 
 1 change branch to 'gh-pages'
- git checkout gh-pages
+ git checkout -b gh-pages
 
 2 Comment 'dist' at .gitignore
 
