@@ -33,7 +33,7 @@ npm run lint
 0 Upload to dev &&&  Delete remote & local 'gh-pages' branch
  git push origin dev
  git push origin --delete gh-pages
- git branch -d gh-pages
+ git branch -D gh-pages
 
 1 change branch to 'gh-pages'
  git checkout gh-pages
