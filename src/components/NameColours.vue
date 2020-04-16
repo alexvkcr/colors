@@ -134,11 +134,13 @@ export default {
 }
 
 .correct{
-  border: 2px solid green;
+  border: 0.2px solid white;
+  outline: 2px solid green;
 }
 
 .fail{
-  border: 2px solid red;
+  border: 0.2px solid white;
+  outline: 2px solid red;
 }
 @media screen and (min-width: 600px) {
   #NameColours{
