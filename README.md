@@ -30,6 +30,10 @@ npm run lint
 ```
 
 ### Deploy at Github
+0 Delete remote & local 'gh-pages' branch
+ git push origin --delete gh-pages
+ git branch -d gh-pages
+
 1 change branch to 'gh-pages'
 
 2 Comment 'dist' at .gitignore
