@@ -1,6 +1,6 @@
 <template>
   <div id="ColourNames">
-    <p class="mob-set">1 {{$t('colourName')}} -> 4 {{$t('options')}}</p>
+    <p class="game-title">1 {{$t('colour')}} -> 4 {{$t('options')}}</p>
     <p class="mob-set colorDisplay"
       v-bind:id="'colour'" 
       v-bind:style="{ backgroundColor: '#'+randomColour.codes[0]}" 
@@ -28,11 +28,11 @@
 <i18n>
 {
   "es": {
-    "colourName": "Nombre del color",
+    "colour": "Color",
     "options": "Opciones"
   },
   "en": {
-    "colourName": "Colour name",
+    "colour": "Colour",
     "options": "Options"
   }
 }
@@ -90,16 +90,16 @@ export default {
     isCorrect(){
       let colourId = document.querySelector('#colour').attributes['attr-id']
       let clickAttrId = event.target.attributes['attr-id'];
-      return this.showPopUp(colourId,clickAttrId)
+      return this.answer(colourId,clickAttrId)
     },
     /**
      * This methdos show a pop up, it depends if it correct or wrong
      */
-    showPopUp(gameId,clickId){
+    answer(gameId,clickId){
       if(gameId.value==clickId.value){
-        this.$emit('reload')
+        this.$emit('correct',clickId.value)
       }else{
-        this.$emit('fail')
+        this.$emit('fail',{'correct':gameId.value, 'fail':clickId.value})
       }
     }
   }
@@ -108,11 +108,17 @@ export default {
 
 <style scoped>
 #ColourNames{
-  width: 100%;
+  margin: 10px;
   padding: 30px 10px 80px 10px;
   
   background-color: white;
   font-size: 16px;
+}
+.game-title{
+  width: 75%;
+  margin: 0 auto;
+
+  font-family: 'Manoyri';
 }
 .mob-set{
   margin-left:20%;
@@ -136,9 +142,18 @@ export default {
   padding: 20px 32px;
 }
 
+.correct{
+  border: 2px solid green;
+}
+
+.fail{
+  border: 2px solid red;
+}
+
 @media screen and (min-width: 600px) {
   #ColourNames{
-    max-width: 820px;
+    max-width: calc(100vw - 40px);
+    margin: 0 10%;
   }
   .button:hover{
     border: 0.2px solid white;

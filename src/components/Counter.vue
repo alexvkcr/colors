@@ -1,6 +1,6 @@
 <template>
   <div id="Counter">
-      {{ $t('exclamationStart') }}{{ $t('youHave') }} {{ propCorrectAnswers }} {{ $tc('correctAnswers', propCorrectAnswers ) }}!
+      {{ $t('exclamationStart') }}{{ $t('youHave') }} {{ $tc('correctAnswers', propCorrectAnswers ) }} {{ propCorrectAnswers }}!
   </div>
 </template>
 
@@ -15,7 +15,7 @@
   "en": {
     "exclamationStart": " ",
     "youHave": " ",
-    "correctAnswers": "correct answers streak | correct answer streak | correct answers streak"
+    "correctAnswers": "Correct answers streak | Correct answer streak | Correct answers streak"
   }
 }
 </i18n>
@@ -31,9 +31,15 @@ export default {
 
 <style scoped>
 #Counter{
-  max-width: 600px;
+  position: relative;
+  bottom: 35px;
+
+  margin-left: 20px;
+  max-width: 50%;
+  
   font-family: 'Manoyri';
   font-size: 18px;
+
 }
 @media screen and (min-width: 600px) {
   #Counter{

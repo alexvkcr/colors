@@ -1,0 +1,66 @@
+<template>
+  <div id="ChangeGame">
+    <span>{{$t('exclamationStart')}}{{$t('changeGame')}}</span>
+    <select class="select-game" v-model="gameSelected" @change="changeComp($event)">
+        <option value="NameCs">{{$t('NameCs')}}</option>
+        <option value="ColourNs">{{$t('ColourNs')}}</option>
+    </select>
+  </div>
+</template>
+
+
+<i18n>
+{
+  "es": {
+    "exclamationStart": "¡",
+    "changeGame": "Cambia de juego!",
+    "NameCs": "Escoge el color",
+    "ColourNs": "Escoge nombre del color"
+  },
+  "en": {
+    "exclamationStart": " ",
+    "changeGame": "Change the game!",
+    "NameCs": "Pick the color",
+    "ColourNs": "Pick colour's name"
+  }
+}
+</i18n>
+
+<script>
+export default {
+  name: 'ChangeGame',
+  methods: {
+    changeComp(event){
+      this.$emit('change',event.target.value)
+    }
+  },
+  data: ()=> ({
+    gameSelected: 'ColourNs'
+  })
+}
+</script>
+
+<style scoped>
+#ChangeGame{
+  position: relative;
+  top: 10px;
+  left: 57%;
+  
+  width: 7em;
+
+  font-family: 'Manoyri';
+  font-size: 18px;
+  
+  border-radius: 3px;
+}
+.select-game{
+  max-width: 100%;
+  z-index: 2;
+
+  background-color: aliceblue;
+  border-style: outset;
+  border-radius: 5px;
+}
+@media screen and (min-width: 600px) {
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div id="NameColours">
-    <p class="mob-set">1 {{$t('colour')}} -> 4 {{$t('options')}}</p>
+    <p class="game-title">1 {{$t('colourName')}} -> 4 {{$t('options')}}</p>
     <p class="mob-set name" v-bind:id="'name'" v-bind:attr-id="'id'+randomColour.codes[0]">{{ randomColour[$i18n.locale] }}</p>
     <p class="mob-set colorDisplay" 
       v-bind:style="{ backgroundColor: '#'+randomColours[0].codes[0]}" 
@@ -24,11 +24,11 @@
 <i18n>
 {
   "es": {
-    "colour": "Color",
+    "colourName": "Nombre del color",
     "options": "Opciones"
   },
   "en": {
-    "colour": "Colour",
+    "colourName": "Colour name",
     "options": "Options"
   }
 }
@@ -93,9 +93,9 @@ export default {
      */
     showPopUp(gameId,clickId){
       if(gameId.value==clickId.value){
-        this.$emit('reload')
+        this.$emit('correct',clickId.value)
       }else{
-        this.$emit('fail')
+        this.$emit('fail',{'correct':gameId.value, 'fail':clickId.value})
       }
     }
   }
@@ -104,9 +104,19 @@ export default {
 
 <style scoped>
 #NameColours{
-    width: 100%;
-    padding: 30px 10px 80px 10px;
-    background-color: white;
+  margin: 10px;
+  padding: 30px 10px 40px 10px;
+  background-color: white;
+}
+.game-title{
+  width: 75%;
+  margin: 0 auto;
+  font-family: 'Manoyri';
+}
+.name{ 
+  font-size: 18px;
+
+  font-family: 'Manoyri';
 }
 .mob-set{
   margin-left:20%;
@@ -123,9 +133,17 @@ export default {
   cursor: pointer;
 }
 
+.correct{
+  border: 2px solid green;
+}
+
+.fail{
+  border: 2px solid red;
+}
 @media screen and (min-width: 600px) {
   #NameColours{
-    max-width: 820px;
+    max-width: calc(100vw - 40px);
+    margin: 0 10%;
   }
   .name{
     padding: 16px 32px;

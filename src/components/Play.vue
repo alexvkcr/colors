@@ -1,45 +1,16 @@
 <template>
   <div id="Play">
-    <transition name="appear">
-      <correct v-if="correct"></correct>
-    </transition>
-    <transition name="appear">
-      <mistake v-if="mistake"></mistake>
-    </transition>
-    <div class="change-section">
-      <span>{{$t('exclamationStart')}}{{$t('changeGame')}}</span>
-      <select class="select-game" v-model="gameSelected" @change="changeComp($event)">
-          <option value="NameCs">{{$t('NameCs')}}</option>
-          <option value="ColourNs">{{$t('ColourNs')}}</option>
-      </select>
-    </div>
+    <change-game @change="changeComp"></change-game>
     <counter class="counter" :prop-correct-answers="correctAnswers"></counter>
-    <name-colours class="game-itself" v-if="compName" :prop-colour-list="propColourList" @reload="correctNC" @fail="failNC"></name-colours>
-    <colour-names class="game-itself" v-if="compColour" :prop-colour-list="propColourList" @reload="correctCN" @fail="failCN"></colour-names>
+    <name-colours class="game-itself" v-if="compName" :prop-colour-list="propColourList" @correct="correctNC" @fail="failNC"></name-colours>
+    <colour-names class="game-itself" v-if="compColour" :prop-colour-list="propColourList" @correct="correctCN" @fail="failCN"></colour-names>
   </div>
 </template>
 
-<i18n>
-{
-  "es": {
-    "exclamationStart": "¡",
-    "changeGame": "Cambia de juego!",
-    "NameCs": "Escoge el color",
-    "ColourNs": "Escoge nombre del color"
-  },
-  "en": {
-    "exclamationStart": " ",
-    "changeGame": "Change the game!",
-    "NameCs": "Pick the color",
-    "ColourNs": "Pick colour's name"
-  }
-}
-</i18n>
 
 <script>
 import Counter from './Counter.vue';
-import Correct from './Correct.vue';
-import Mistake from './Mistake.vue';
+import ChangeGame from './ChangeGame.vue';
 
 export default {
   name: 'Play',
@@ -48,8 +19,6 @@ export default {
   },
   data: () => ({
     gameSelected: 'ColourNs',
-    correct: false, 
-    mistake: false,
     compName: false, 
     compColour: true,
     componentKeyNC: 0,
@@ -57,23 +26,16 @@ export default {
     correctAnswers: 0
   }),  
   methods: {
-    changeComp(event){
-      console.log('We dont use event yet. :'+event.target.value)
-      if(this.gameSelected == 'NameCs'){
-        this.compName = true
-        this.compColour = false
-      }else{
-        this.compName = false
-        this.compColour = true
+    changeComp(gameEmitted){
+        if(gameEmitted == 'NameCs'){
+          this.gameSelected == 'NameCs'
+          this.compColour = false
+          this.compName = true
+        }else{
+          this.gameSelected == 'ColourNs'
+          this.compName = false
+          this.compColour = true
       }
-    },
-    transitionCorrect(){
-      this.correct = true
-      setTimeout(() => this.correct = false, 1500);
-    },
-    transitionMistake(){
-      this.mistake = true
-      setTimeout(() => this.mistake = false, 1500);
     },
     forceRerenderNC() {
       this.compName = false
@@ -87,29 +49,45 @@ export default {
         this.compColour = true
       });
     },
-    correctNC() {
+    correctNC(correct) {
       this.correctAnswers = this.correctAnswers + 1
-      this.transitionCorrect();
-      this.forceRerenderNC();
+      
+      let corrElem= document.querySelectorAll(`#NameColours p[attr-id=${correct}]`)[1]
+      corrElem.classList.add("correct")
+      
+      setTimeout(() => this.forceRerenderNC(), 1500)
     },
-    correctCN() {
+    correctCN(correct) {
       this.correctAnswers = this.correctAnswers + 1
-      this.transitionCorrect();
-      this.forceRerenderCN();
+
+      let corrElem= document.querySelectorAll(`#ColourNames p[attr-id=${correct}]`)[1]
+      corrElem.classList.add("correct")
+      
+      setTimeout(() => this.forceRerenderCN(), 1500)
     },
-    failNC() {
+    failNC(both) {
+      let {correct,fail} = both
+      let corrElem= document.querySelectorAll(`#NameColours p[attr-id=${correct}]`)[1]
+      let failElem= document.querySelector(`#NameColours p[attr-id=${fail}]`)
+      corrElem.classList.add("correct")
+      failElem.classList.add("fail")
       this.correctAnswers = 0
-      this.transitionMistake();
-      this.forceRerenderNC();
+
+      setTimeout(() => this.forceRerenderNC(), 1500)
     },
-    failCN() {
+    failCN(both) {
+      let {correct,fail} = both
+      let corrElem= document.querySelectorAll(`#ColourNames p[attr-id=${correct}]`)[1]
+      let failElem= document.querySelector(`#ColourNames p[attr-id=${fail}]`)
+      corrElem.classList.add("correct")
+      failElem.classList.add("fail")
       this.correctAnswers = 0
-      this.transitionMistake();
-      this.forceRerenderCN();
+      
+      setTimeout(() => this.forceRerenderCN(), 1500)
     }
   },
   components:{
-    Counter, Correct, Mistake,
+    Counter, ChangeGame,
     colourNames: () => import(/* webpackChunkName: "colourNames" */'./ColourNames.vue'),
     nameColours: () => import(/* webpackChunkName: "nameColours" */'./NameColours.vue'),
   }
@@ -117,25 +95,6 @@ export default {
 </script>
 
 <style scoped>
-.counter{
-  position: relative;
-  bottom: 20px;
-}
-.select-game{
-  background-color: aliceblue;
-  border-style: outset;
-  border-radius: 5px;
-}
-.change-section{
-  font-family: 'Manoyri';
-  font-size: 18px;
-  width: 9em;
-
-  position: relative;
-  top: 10px;
-  left: 60%;
-  border-radius: 3px;
-}
 .game-itself{
   position: relative;
   bottom: 18px;
@@ -155,10 +114,6 @@ export default {
 @media screen and (min-width: 600px) {
   #Play{
     width: 100%;
-    margin: 0px 10%;
-  }
-  .change{
-    left: 75%;
   }
 }
 

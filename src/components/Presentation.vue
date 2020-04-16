@@ -107,9 +107,9 @@ export default {
   opacity: 0;
 }
 .coloured-section{
-  margin: 40px 10%;
+  margin: 40px auto;
   padding: 10px 20px;
-  min-width: 250px;
+  max-width: calc(100vw - 40px);
   background-color: #b8e0dc;
 }
 
@@ -120,6 +120,7 @@ h2{
 
 .select-group{
   display: inline-block;
+  margin: 10px 0 0 0;
   font-weight: bold;
 }
 
@@ -134,9 +135,12 @@ h2{
 .texts{
   display: inline-block;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
 }
 @media screen and (min-width: 600px) {
+  .coloured-section{
+    margin: 40px 10%;
+  }
   .texts{
     width: 76%;
   }
