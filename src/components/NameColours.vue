@@ -145,7 +145,7 @@ export default {
 @media screen and (min-width: 600px) {
   #NameColours{
     max-width: calc(100vw - 40px);
-    margin: 0 10%;
+    margin: 10px 10% 0;
   }
   .name{
     padding: 16px 32px;

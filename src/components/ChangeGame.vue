@@ -42,12 +42,10 @@ export default {
 
 <style scoped>
 #ChangeGame{
-  position: relative;
-  top: 10px;
-  left: 57%;
-  
-  width: 7em;
+  display: inline-block;
+  max-width: 39%;
 
+  text-align: right;
   font-family: 'Manoyri';
   font-size: 18px;
   
@@ -62,5 +60,8 @@ export default {
   border-radius: 5px;
 }
 @media screen and (min-width: 600px) {
+  #ChangeGame{
+    margin: 10px 0 0 40px;
+  }
 }
 </style>

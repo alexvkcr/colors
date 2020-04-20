@@ -155,7 +155,7 @@ export default {
 @media screen and (min-width: 600px) {
   #ColourNames{
     max-width: calc(100vw - 40px);
-    margin: 0 10%;
+    margin: 10px 10% 0;
   }
   .button:hover{
     border: 0.2px solid white;
