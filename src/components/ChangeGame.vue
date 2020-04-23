@@ -42,13 +42,12 @@ export default {
 
 <style scoped>
 #ChangeGame{
-  display: inline-block;
-  max-width: 39%;
-
   text-align: right;
   font-family: 'Manoyri';
   font-size: 18px;
   
+  margin-right: 3vw;
+
   border-radius: 3px;
 }
 .select-game{

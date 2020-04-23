@@ -32,8 +32,7 @@ export default {
 <style scoped>
 #Counter{
   display: inline-block;
-  margin-left: 2vw;
-  max-width: 55%;
+  margin-left: 3vw;
   
   font-family: 'Manoyri';
   font-size: 18px;

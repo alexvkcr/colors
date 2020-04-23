@@ -1,9 +1,9 @@
 <template>
   <div id="Play">
     <counter class="counter" :prop-correct-answers="correctAnswers"></counter>
-    <change-game @change="changeComp"></change-game>
-    <name-colours v-if="compName" :prop-colour-list="propColourList" @correct="correctNC" @fail="failNC"></name-colours>
-    <colour-names v-if="compColour" :prop-colour-list="propColourList" @correct="correctCN" @fail="failCN"></colour-names>
+    <change-game class="change-game" @change="changeComp"></change-game>
+    <name-colours class="game-itself" v-if="compName" :prop-colour-list="propColourList" @correct="correctNC" @fail="failNC"></name-colours>
+    <colour-names class="game-itself" v-if="compColour" :prop-colour-list="propColourList" @correct="correctCN" @fail="failCN"></colour-names>
   </div>
 </template>
 
@@ -95,6 +95,16 @@ export default {
 </script>
 
 <style scoped>
+#Play{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.game-itself{
+  grid-column-start: span 3;
+}
 .appear-enter-active {
   transition: all .45s cubic-bezier(0,.99,.44,1.28);
 }

@@ -144,12 +144,12 @@ export default {
 
 .correct{
   border: 0.2px solid white;
-  outline: 2px solid green;
+  outline: 2px solid #ccff00;
 }
 
 .fail{
   border: 0.2px solid white;
-  outline: 2px solid red;
+  outline: 2px solid #FF355E;
 }
 
 @media screen and (min-width: 600px) {
