@@ -39,6 +39,16 @@ export default {
       available_in_en: true,
       source: 'https://en.wikipedia.org/wiki/Bistre'
     },
+    ocre:     {
+      codes: ['B9935A'],
+      es: 'Ocre',
+      en: 'Ochre',
+      es_tip: 'Marrón anaranjado o rojizo',
+      en_tip: 'Reddish brown',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Ocre'
+    },
     grisPayne: {
       codes: ['536878'],
       es: 'Gris Payne',
@@ -69,15 +79,125 @@ export default {
       available_in_en: true,
       source: 'https://es.wikipedia.org/wiki/Feldgrau'
     },
-    sinople: {
-      codes: ['008f4c'],
-      es: 'Sinople',
-      en: 'Sinople',
-      es_tip: 'Verde heráldico',
-      en_tip: 'Heraldic green',
+    turquí: {
+      codes: ['122562'],
+      es: 'Turquí',
+      en: 'Navy blue',
+      es_tip: 'Azul oscuro profundo',
+      en_tip: 'Dark shade of blue',
       available_in_es: true,
       available_in_en: true,
-      source: 'https://encycolorpedia.es/008f4c'
+      source: 'https://encycolorpedia.es/122562'
+    },
+    añil: {
+      codes: ['264796'],
+      es: 'Añil',
+      en: 'Indigo',
+      es_tip: 'Azul oscuro y profundo. Índigo ó Glasto',
+      en_tip: 'Deep dark blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/A%C3%B1il'
+    },
+    indigo: {
+      codes: ['264796'],
+      es: 'Índigo',
+      en: 'Indigo',
+      es_tip: 'Azul oscuro y profundo. Añil ó Glasto',
+      en_tip: 'Deep dark blue',
+      available_in_es: true,
+      available_in_en: false,
+      source: 'https://es.wikipedia.org/wiki/A%C3%B1il'
+    },
+    glasto: {
+      codes: ['264796'],
+      es: 'Glasto',
+      en: 'Indigo',
+      es_tip: 'Azul oscuro y profundo. Índigo ó Añil',
+      en_tip: 'Deep dark blue',
+      available_in_es: true,
+      available_in_en: false,
+      source: 'https://es.wikipedia.org/wiki/A%C3%B1il'
+    },
+    cobalto: {
+      codes: ['0047AB'],
+      es: 'Cobalto',
+      en: 'Cobalt',
+      es_tip: 'Azul Cobalto',
+      en_tip: 'Cobalt blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://en.wikipedia.org/wiki/Cobalt_blue'
+    },
+    cobaltoClaro: {
+      codes: ['091F92'],
+      es: 'Cobalto Claro',
+      en: 'Light Cobalt',
+      es_tip: 'Azul Cobalto claro',
+      en_tip: 'Light Cobalt blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Azul_cobalto'
+    },
+    cobaltoOscuro: {
+      codes: ['004F79'],
+      es: 'Cobalto Oscuro',
+      en: 'Dark Cobalt',
+      es_tip: 'Azul Cobalto Oscuro',
+      en_tip: 'Dark Cobalt blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Azul_cobalto'
+    },
+    lapislazuli: {
+      codes: ['4273B8'],
+      es: 'Lapislázuli',
+      en: 'Lapis laculi',
+      es_tip: 'Azul marino templado',
+      en_tip: 'Mild navy blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Lapisl%C3%A1zuli'
+    },
+    cerúleoOscuro: {
+      codes: ['08457E'],
+      es: 'Cerúleo oscuro',
+      en: 'Dark Cerulean',
+      es_tip: 'Azul oscuro poco saturado',
+      en_tip: 'Dark less saturation blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Cer%C3%BAleo'
+    },
+    azur: {
+      codes: ['0066FF'],
+      es: 'Azur',
+      en: 'Azure',
+      es_tip: 'Azul heráldico',
+      en_tip: 'Heraldic blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Azur'
+    }, 
+    cerúleo: {
+      codes: ['0098D5'],
+      es: 'Cerúleo',
+      en: 'Cerulean',
+      es_tip: 'Azul medio poco saturado',
+      en_tip: 'Mild less saturation blue',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Cer%C3%BAleo'
+    },
+    cerceta: {
+      codes: ['009B94'],
+      es: 'Cerceta',
+      en: 'Teal',
+      es_tip: 'Azul verde',
+      en_tip: 'Blue-green',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://es.wikipedia.org/wiki/Azul_verde'
     },
     verdeMalaquita: {
       codes: ['12774f'],
@@ -88,6 +208,16 @@ export default {
       available_in_es: true,
       available_in_en: true,
       source: 'https://mineralesdelmundo.com/malaquita/'
+    },
+    sinople: {
+      codes: ['008f4c'],
+      es: 'Sinople',
+      en: 'Sinople',
+      es_tip: 'Verde heráldico',
+      en_tip: 'Heraldic green',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://encycolorpedia.es/008f4c'
     },
     jade: {
       codes: ['00a86b'],
@@ -198,6 +328,16 @@ export default {
       available_in_es: true,
       available_in_en: true,
       source: 'https://es.wikipedia.org/wiki/Durazno_%28color%29#Variaciones_del_color_durazno'
+    },
+    ambrosía:       {
+      codes: ['f8eadd'],
+      es: 'Ambrosía',
+      en: 'Ambrosía',
+      es_tip: 'Color piel blanca',
+      en_tip: 'White skin color',
+      available_in_es: true,
+      available_in_en: true,
+      source: 'https://encycolorpedia.es/f8eadd'
     },
     gamuza: {
       codes: ['E8BD85'],
@@ -408,115 +548,5 @@ export default {
       available_in_es: true,
       available_in_en: true,
       source: 'https://encycolorpedia.es/ab2a3e'
-    },
-    añil: {
-      codes: ['264796'],
-      es: 'Añil',
-      en: 'Indigo',
-      es_tip: 'Azul oscuro y profundo. Índigo ó Glasto',
-      en_tip: 'Deep dark blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/A%C3%B1il'
-    },
-    indigo: {
-      codes: ['264796'],
-      es: 'Índigo',
-      en: 'Indigo',
-      es_tip: 'Azul oscuro y profundo. Añil ó Glasto',
-      en_tip: 'Deep dark blue',
-      available_in_es: true,
-      available_in_en: false,
-      source: 'https://es.wikipedia.org/wiki/A%C3%B1il'
-    },
-    glasto: {
-      codes: ['264796'],
-      es: 'Glasto',
-      en: 'Indigo',
-      es_tip: 'Azul oscuro y profundo. Índigo ó Añil',
-      en_tip: 'Deep dark blue',
-      available_in_es: true,
-      available_in_en: false,
-      source: 'https://es.wikipedia.org/wiki/A%C3%B1il'
-    },
-    turquí: {
-      codes: ['122562'],
-      es: 'Turquí',
-      en: 'Navy blue',
-      es_tip: 'Azul oscuro profundo',
-      en_tip: 'Dark shade of blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://encycolorpedia.es/122562'
-    },
-    cobalto: {
-      codes: ['0047AB'],
-      es: 'Cobalto',
-      en: 'Cobalt',
-      es_tip: 'Azul Cobalto',
-      en_tip: 'Cobalt blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://en.wikipedia.org/wiki/Cobalt_blue'
-    },
-    cobaltoClaro: {
-      codes: ['091F92'],
-      es: 'Cobalto Claro',
-      en: 'Light Cobalt',
-      es_tip: 'Azul Cobalto claro',
-      en_tip: 'Light Cobalt blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/Azul_cobalto'
-    },
-    cobaltoOscuro: {
-      codes: ['004F79'],
-      es: 'Cobalto Oscuro',
-      en: 'Dark Cobalt',
-      es_tip: 'Azul Cobalto Oscuro',
-      en_tip: 'Dark Cobalt blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/Azul_cobalto'
-    },
-    lapislazuli: {
-      codes: ['4273B8'],
-      es: 'Lapislázuli',
-      en: 'Lapis laculi',
-      es_tip: 'Azul marino templado',
-      en_tip: 'Mild navy blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/Lapisl%C3%A1zuli'
-    },
-    cerúleo: {
-      codes: ['0098D5'],
-      es: 'Cerúleo',
-      en: 'Cerulean',
-      es_tip: 'Azul medio poco saturado',
-      en_tip: 'Mild less saturation blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/Cer%C3%BAleo'
-    },
-    cerúleoOscuro: {
-      codes: ['08457E'],
-      es: 'Cerúleo oscuro',
-      en: 'Dark Cerulean',
-      es_tip: 'Azul oscuro poco saturado',
-      en_tip: 'Dark less saturation blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/Cer%C3%BAleo'
-    },
-    azur: {
-      codes: ['0066FF'],
-      es: 'Azur',
-      en: 'Azure',
-      es_tip: 'Azul heráldico',
-      en_tip: 'Heraldic blue',
-      available_in_es: true,
-      available_in_en: true,
-      source: 'https://es.wikipedia.org/wiki/Azur'
     },
 }
