@@ -23,7 +23,7 @@ export default {
 
 <style>
 h1{
-  font-family: 'Manoyri';
+  font-family: 'Manoyri','Google Sans',sans-serif;
   margin: 30px 0;
   color: #2E6C61;
   text-align: center;
