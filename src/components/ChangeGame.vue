@@ -42,15 +42,15 @@ export default {
 
 <style scoped>
 #ChangeGame{
-  text-align: right;
-  font-family: 'Manoyri';
-  font-size: 18px;
+  font-family: 'Google Sans',sans-serif;
+  font-size: 12px;
   
   margin-right: 3vw;
 
   border-radius: 3px;
 }
-.select-game{
+.select-game{    
+  display: block;
   max-width: 100%;
   z-index: 2;
 

@@ -1,11 +1,12 @@
 <template>
   <div id="ColourNames">
     <p class="game-title">1 {{$t('colour')}} -> 4 {{$t('options')}}</p>
-    <p class="mob-set colorDisplay"
+    <p class="mob-set color-display"
       v-bind:id="'colour'" 
       v-bind:style="{ backgroundColor: '#'+randomColour.codes[0]}" 
       v-bind:attr-id="'id'+randomColour.codes[0] ">
     </p>
+    <show-clue class="show-clue" :prop-clue='randomColour[$i18n.locale+"_tip"]'></show-clue>
     <p class="mob-set button"  v-bind:attr-id="'id'+randomColours[0].codes[0]"
       v-on:click="isCorrect($event)">
     {{ randomColours[0][$i18n.locale] }}
@@ -38,6 +39,8 @@
 }
 </i18n>
 <script>
+import ShowClue from './ShowClue.vue';
+
 export default {
   name: 'ColourNames',
   props: {
@@ -102,6 +105,9 @@ export default {
         this.$emit('fail',{'correct':gameId.value, 'fail':clickId.value})
       }
     }
+  },
+  components:{
+    ShowClue
   }
 }
 </script>
@@ -118,24 +124,31 @@ export default {
   width: 75%;
   margin: 0 auto;
 
-  font-family: 'Manoyri';
+  font-family: 'Google Sans',sans-serif;
+}
+.show-clue{
+  position: relative;
+  bottom: 40px;
+  left: 66%;
 }
 .mob-set{
   margin-left:20%;
 }
 .button{
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  font-family: 'Clinton';
   background-color: lightgrey;
   border: 0.2px solid black;
   color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
 }
 
-.colorDisplay{
+.color-display{
   width: 100px;
   border: 2px solid white;
   margin-left:20%;
@@ -144,12 +157,12 @@ export default {
 
 .correct{
   border: 0.2px solid white;
-  outline: 2px solid #ccff00;
+  outline: 3px solid green;
 }
 
 .fail{
   border: 0.2px solid white;
-  outline: 2px solid #FF355E;
+  outline: 3px solid #FF355E;
 }
 
 @media screen and (min-width: 600px) {
