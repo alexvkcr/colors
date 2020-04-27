@@ -34,8 +34,8 @@ export default {
   display: inline-block;
   margin-left: 3vw;
   
-  font-family: 'Manoyri';
-  font-size: 18px;
+  font-family: 'Google Sans',sans-serif;
+  font-size: 14px;
 
 }
 @media screen and (min-width: 600px) {

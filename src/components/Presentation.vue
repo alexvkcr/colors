@@ -14,6 +14,7 @@
         </select>
       </div>
       <ul class="texts">
+        <li class="bold">{{ $t('tease') }}</li>
         <li>{{ $t('what') }}</li>
         <li>{{ $t('what2') }} </li>
         <li>{{ $t('explanation') }}</li>
@@ -50,9 +51,10 @@ export default {
   "es": {
     "play": "¡JUEGA YA!",
     "welcome": "¡Bienvenidos a GetColors!",
-    "what": "Esta es una página dónde encontrarás divertidos juegos para entretenerte y convertirte en alguien distinguido que sabe de colores al mismo tiempo.",
-    "what2": "Escoge sabiamente tu juego ya que estos son muy distintos en dificultad.",
-    "explanation": "Encontrarás las instrucciones para cada juego debajo de él cuando lo selecciones.",
+    "tease": "¿Crees que te conoces todos los colores?",
+    "what": "Aquí encontrarás divertidos juegos para entretenerte y conseguir un lenguaje más distinguido.",
+    "what2": "Escoge sabiamente tu juego para aprender el máximo.",
+    "explanation": "Las instrucciones para cada juego en él mismo cuando lo selecciones.",
     "change": "Cambiar idioma",
     "en": "Inglés",
     "es": "Español"
@@ -60,9 +62,10 @@ export default {
   "en": {
     "play": "PLAY NOW!",
     "welcome": "Welcome to GetColors!",
-    "what": "This is a web where you'll find fun games to amuse yourself and become someone distiguished whom knwos about colors at the same time",
-    "what2": "Choose wisely your game since they are very different in difficuty",
-    "explanation": "You'll find the instructions for each game under it when you select it",
+    "tease": "Do you believe you know all the colors?",
+    "what": "Here you'll find fun games to amuse yourself and get a more distiguished speaking.",
+    "what2": "Choose wisely your game to learn as mush as possible.",
+    "explanation": "The instructions for each game are below them when you select it.",
     "change": "Switch language",
     "en": "English",
     "es": "Spanish"
@@ -72,10 +75,11 @@ export default {
 
 <style scoped>
 *{
-    color: #2e586c;
+  color: #2e586c;
 }
 #Presentation{
   max-width: 1024px;
+  font-family: 'Roboto',arial,sans-serif;
 }
 .play{
   width: 180px;/*margin-left depends on this size */
@@ -131,11 +135,26 @@ h2{
   border-style: outset;
   border-radius: 5px;
 }
+ul {
+	position: relative;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+}
+ul li:before {
+	content: ">>";
+  font-weight: initial;
+	position: absolute;
+	left: 0;
+}
 
 .texts{
   display: inline-block;
   width: 100%;
   padding: 20px;
+}
+.bold{
+  font-weight: bold;
 }
 @media screen and (min-width: 600px) {
   .coloured-section{

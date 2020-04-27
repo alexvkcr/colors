@@ -43,7 +43,7 @@ h1{
   text-align: center;
 }
 .v-slide-group__wrapper{
-  font-family: 'Clinton';
+  font-family: 'Roboto',arial,sans-serif;;
 }
 .v-slide-group__prev:not(.a):not(.a):not(.a):not(.a):not(.a):not(.a){
   display:none;
