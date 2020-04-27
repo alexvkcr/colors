@@ -13,12 +13,12 @@
 {
   "es": {
     "explanation": "Esta web te permite aprender una gran variedad de colores. El objetivo es ir más allá de los colores que todos conocemos y aprender más colores y más bonitos.",
-    "yourBrain": "Tu cerebro se beneficiará y dejarás huella en los demás con tu sabiduría :p",
+    "yourBrain": "Tu cerebro se beneficiará y dejarás huella en los demás con tu sabiduría.",
     "hereYouHave": "Aquí tienes todos los colores disponibles que aprenderás"
   },
   "en": {
     "explanation": "This website allows you to learn a great variety of colors. The point is to go beyond the colors we all know and to learn more colors and more beautiful colors.",
-    "yourBrain": "Your brain will benefit and you'll impact others with your wisdom :p",
+    "yourBrain": "Your brain will benefit and you'll impact others with your wisdom.",
     "hereYouHave": "Here you have all the colors available thet you'll learn"
   }
 }
@@ -42,6 +42,7 @@ export default {
 <style scoped>
 *{
     color: #2e586c;
+    font-family: 'Roboto',arial,sans-serif;
 }
 .intro, .author{
   margin: 10px 10px;
