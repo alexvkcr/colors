@@ -1,6 +1,11 @@
 <template>
   <div id="Play">
-    <counter class="counter" :prop-correct-answers="correctAnswers"></counter>
+    <div>
+      <counter class="counter" :prop-correct-answers="correctAnswers"></counter>
+      <span class="icon-sound" @click="switchSound"></span>
+      <audio ref="correct" src="~@/assets/audio/Correct-answer.mp3"></audio>
+      <audio ref="fail" src="~@/assets/audio/Fail-sound.mp3"></audio>
+    </div>
     <change-game class="change-game" @change="changeComp"></change-game>
     <name-colours class="game-itself" v-if="compName" :prop-colour-list="propColourList" @correct="correctNC" @fail="failNC"></name-colours>
     <colour-names class="game-itself" v-if="compColour" :prop-colour-list="propColourList" @correct="correctCN" @fail="failCN"></colour-names>
@@ -18,6 +23,7 @@ export default {
     'propColourList': Object
   },
   data: () => ({
+    soundEnabled: true,
     gameSelected: 'ColourNs',
     compName: false, 
     compColour: true,
@@ -49,9 +55,21 @@ export default {
         this.compColour = true
       });
     },
+    switchSound(){
+      let soundIcon= document.querySelector('span.icon-sound')
+      if(soundIcon.classList.contains("icon-mute")){
+        soundIcon.classList.remove("icon-mute")
+        this.soundEnabled = true
+      }else{
+        soundIcon.classList.add("icon-mute")
+        this.soundEnabled = false
+      }
+    },
     correctNC(correct) {
       this.correctAnswers = this.correctAnswers + 1
-      
+      if(this.soundEnabled)
+        this.$refs.correct.play() 
+
       let corrElem= document.querySelectorAll(`#NameColours p[attr-id=${correct}]`)[1]
       corrElem.classList.add("correct")
       
@@ -59,6 +77,8 @@ export default {
     },
     correctCN(correct) {
       this.correctAnswers = this.correctAnswers + 1
+      if(this.soundEnabled)
+        this.$refs.correct.play() 
 
       let corrElem= document.querySelectorAll(`#ColourNames p[attr-id=${correct}]`)[1]
       corrElem.classList.add("correct")
@@ -66,6 +86,8 @@ export default {
       setTimeout(() => this.forceRerenderCN(), 1500)
     },
     failNC(both) {
+      if(this.soundEnabled)
+        this.$refs.fail.play() 
       let {correct,fail} = both
       let corrElem= document.querySelectorAll(`#NameColours p[attr-id=${correct}]`)[1]
       let failElem= document.querySelector(`#NameColours p[attr-id=${fail}]`)
@@ -76,6 +98,8 @@ export default {
       setTimeout(() => this.forceRerenderNC(), 1500)
     },
     failCN(both) {
+      if(this.soundEnabled)
+        this.$refs.fail.play() 
       let {correct,fail} = both
       let corrElem= document.querySelectorAll(`#ColourNames p[attr-id=${correct}]`)[1]
       let failElem= document.querySelector(`#ColourNames p[attr-id=${fail}]`)
@@ -101,6 +125,25 @@ export default {
   grid-template-rows: 0.1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+.icon-sound{
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  margin-left: 20px;
+  
+  background-image: url("~@/assets/volumen.png");
+  cursor: pointer;
+}
+.icon-mute{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 20px;
+  
+  background-image: url("~@/assets/mudo.png");
+  cursor: pointer;
+  background-size: 14px;
 }
 .game-itself{
   grid-column-start: span 3;

@@ -1,6 +1,6 @@
 <template>
   <div id="Counter">
-      {{ $t('exclamationStart') }}{{ $t('youHave') }} {{ $tc('correctAnswers', propCorrectAnswers ) }} {{ propCorrectAnswers }}!
+      {{ $t('exclamationStart') }}{{ $t('youHave') }} {{ $tc('correctAnswers', propCorrectAnswers ) }} <span class="bold">{{ propCorrectAnswers }}</span>!
   </div>
 </template>
 
