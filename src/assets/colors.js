@@ -463,8 +463,8 @@ export default {
       codes: ['E0115F'],
       es: 'Rubí',
       en: 'Ruby',
-      es_tip: 'Rojo oscuro vivo',
-      en_tip: 'Vivid dark red',
+      es_tip: 'Rojo oscuro rosaceo',
+      en_tip: 'Pinkish dark red',
       available_in_es: true,
       available_in_en: true,
       source: 'https://encycolorpedia.com/e0115f'
