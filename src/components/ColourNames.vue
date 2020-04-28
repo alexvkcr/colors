@@ -139,7 +139,6 @@ export default {
   margin: 4px 2px;
   cursor: pointer;
 
-  font-family: 'Clinton';
   background-color: lightgrey;
   border: 0.2px solid black;
   color: black;
