@@ -164,6 +164,9 @@ export default {
     padding: 16px 32px;
     padding: 16px 32px;
   }
+  .show-clue{
+    max-width: 160px;
+  }
   .color-display:hover{
     border: 0.2px solid white;
   }

@@ -170,6 +170,9 @@ export default {
     max-width: calc(100vw - 40px);
     margin: 10px 10% 0;
   }
+  .show-clue{
+    max-width: 160px;
+  }
   .button:hover{
     border: 0.2px solid white;
     background-color: lightslategrey;
