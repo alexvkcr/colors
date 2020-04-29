@@ -4,12 +4,15 @@
       color="#2E6C61"
       background-color="#aae0bc"
     >
-      <v-tab to="/colors">
+      <v-tab to="/">
         {{ $t('presentation') }}
       </v-tab>
-    <v-tab to="/about">
-        {{ $t('about') }}
-    </v-tab>
+      <v-tab to="/colours">
+        {{ $t('colours') }}
+      </v-tab>
+      <v-tab to="/about">
+          {{ $t('about') }}
+      </v-tab>
     </v-tabs>
     <router-view></router-view>
   </div>
@@ -19,11 +22,13 @@
 {
   "es": {
     "presentation": "presentación",
+    "colours": "Colores",
     "play" : "Juega",
     "about" : "Acerca"
   },
   "en": {
     "presentation": "presentation",
+    "colours": "Colours",
     "play": "play",
     "about" : "About"
   }

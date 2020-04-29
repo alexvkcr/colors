@@ -3,9 +3,9 @@
     <div class="intro">{{ $t('explanation') }}</div>
     <div class="intro">{{ $t('yourBrain') }}</div>
     <author class="author"></author>
-    <div class="intro">{{ $t('hereYouHave') }}</div>
-    <color-list :prop-colour-list="propColourList"></color-list>
-    Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+    <div class="intro">
+      Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+    </div>
   </div>
 </template>
 
@@ -26,7 +26,6 @@
 </i18n>
 
 <script>
-import ColorList from './ColorList.vue';
 import Author from './Author.vue';
 
 export default {
@@ -35,7 +34,7 @@ export default {
     'propColourList': Object
   },
   components: {
-    ColorList, Author
+    Author
   }
 }
 </script>
