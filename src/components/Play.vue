@@ -130,7 +130,7 @@ export default {
   display: inline-block;
   width: 16px;
   height: 14px;
-  margin-left: 20px;
+  margin: 8px 5px 0 15px;
   
   background-image: url("~@/assets/volumen.png");
   cursor: pointer;
@@ -139,7 +139,7 @@ export default {
   display: inline-block;
   width: 14px;
   height: 14px;
-  margin-left: 20px;
+  margin: 8px 5px 0 15px;
   
   background-image: url("~@/assets/mudo.png");
   cursor: pointer;
