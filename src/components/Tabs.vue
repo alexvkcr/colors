@@ -4,7 +4,7 @@
       color="#2E6C61"
       background-color="#aae0bc"
     >
-      <v-tab to="/">
+      <v-tab to="/colors">
         {{ $t('presentation') }}
       </v-tab>
       <v-tab to="/colours">
