@@ -130,6 +130,7 @@ export default {
   position: relative;
   bottom: 40px;
   left: 66%;
+  max-width: 100px;
 }
 .mob-set{
   margin-left:20%;
