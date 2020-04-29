@@ -133,6 +133,7 @@ export default {
   position: relative;
   bottom: 18px;
   left: 66%;
+  max-width: 100px;
 }
 .color-display{
   width: 100px;
