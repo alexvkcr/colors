@@ -4,15 +4,15 @@
       color="#2E6C61"
       background-color="#aae0bc"
     >
-      <v-tab to="/">
+      <v-tab to="/colors">
         {{ $t('presentation') }}
       </v-tab>
-    <v-tab to="/play">
-        {{ $t('play') }}
-    </v-tab>
-    <v-tab to="/howto">
-        {{ $t('howto') }}
-    </v-tab>
+      <v-tab to="/colours">
+        {{ $t('colours') }}
+      </v-tab>
+      <v-tab to="/about">
+          {{ $t('about') }}
+      </v-tab>
     </v-tabs>
     <router-view></router-view>
   </div>
@@ -22,13 +22,15 @@
 {
   "es": {
     "presentation": "presentación",
+    "colours": "Colores",
     "play" : "Juega",
-    "howto" : "Cómo jugar"
+    "about" : "Acerca"
   },
   "en": {
     "presentation": "presentation",
+    "colours": "Colours",
     "play": "play",
-    "howto" : "How to"
+    "about" : "About"
   }
 }
 </i18n>
@@ -41,9 +43,12 @@ export default {
 
 <style>
 h1{
-    margin: 30px 0;
-    color: #2E6C61;
-    text-align: center;
+  margin: 30px 0;
+  color: #2E6C61;
+  text-align: center;
+}
+.v-slide-group__wrapper{
+  font-family: 'Roboto',arial,sans-serif;;
 }
 .v-slide-group__prev:not(.a):not(.a):not(.a):not(.a):not(.a):not(.a){
   display:none;

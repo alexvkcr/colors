@@ -7,7 +7,7 @@
 <i18n>
 {
   "es": {
-    "learnColors": "¡Aprende todos los colores!"
+    "learnColors": "¡Todos los colores!"
   },
   "en": {
     "learnColors": "Learn all the colors!"
@@ -23,8 +23,9 @@ export default {
 
 <style>
 h1{
-    margin: 30px 0;
-    color: #2E6C61;
-    text-align: center;
+  font-family: 'Manoyri','Google Sans',sans-serif;
+  margin: 30px 0;
+  color: #2E6C61;
+  text-align: center;
 }
 </style>
