@@ -1,6 +1,4 @@
 # colors
-#TO-DO
-Add a list of colors in HowTo and explanation of the 2 games, name the color, go over the color
 
 ## Web Available at 
 https://alexvkcr.github.io/colors
