@@ -25,14 +25,13 @@ import colorsList from './assets/colors.js';
 
 const routes = [
     { name: 'Index', path: '/colors', component: ()=> import(/* webpackChunkName: "presentation" */'./components/Presentation.vue'), props: { propColourList: colorsList } },
-    { name: 'Colors', path: '/colours', component: ()=> import(/* webpackChunkName: "colours" */'./components/ColoursView.vue'), props: { propColourList: colorsList } },
-    { name: 'About', path: '/about', component: ()=> import(/* webpackChunkName: "about" */'./components/About.vue'), props: { propColourList: colorsList } }
+    { name: 'Colors', path: '/colors/colours', component: ()=> import(/* webpackChunkName: "colours" */'./components/ColoursView.vue'), props: { propColourList: colorsList } },
+    { name: 'About', path: '/colors/about', component: ()=> import(/* webpackChunkName: "about" */'./components/About.vue'), props: { propColourList: colorsList } }
 ]
 
-
 const router = new VueRouter({
-    mode: 'history',
-    base: __dirname,
+    mode: 'hash',
+    base :'/colors/',
     routes
 })
 
