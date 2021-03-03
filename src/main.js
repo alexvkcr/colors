@@ -30,12 +30,10 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
+    base :'/colors/',
     routes
 })
-if (!window.location.hostname === "localhost" && !window.location.hostname === "127.0.0.1"){
-    router['base']= '/colors/'
-}
 
 import "@/assets/typos.css"
 
