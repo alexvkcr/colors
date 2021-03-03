@@ -29,12 +29,13 @@ const routes = [
     { name: 'About', path: '/colors/about', component: ()=> import(/* webpackChunkName: "about" */'./components/About.vue'), props: { propColourList: colorsList } }
 ]
 
-
 const router = new VueRouter({
     mode: 'history',
-    base: __dirname,
     routes
 })
+if (!window.location.hostname === "localhost" && !window.location.hostname === "127.0.0.1"){
+    router['base']= '/colors/'
+}
 
 import "@/assets/typos.css"
 
