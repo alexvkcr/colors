@@ -4,7 +4,7 @@ Add a list of colors in HowTo and explanation of the 2 games, name the color, go
 
 ## Web Available at
 
-https://alexvkcr.github.io/colors
+https://alexvkcr.github.io/colors/#/colors/
 
 ## Project setup
 
